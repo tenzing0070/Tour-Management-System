@@ -52,6 +52,13 @@ Route::post('/tms/demoBooking','DemoController@store');
 Route::get('/tms/program','ProgramController@create');
 Route::post('/tms/program','ProgramController@store');
 
+//package add
+Route::get('/tms/packageData','ProgramController@index');
+
+//package edit,update,delete
+Route::get('/tms/packageEdit','ProgramController@edit');
+// Route::get('/tms/packageEdit','ProgramController@update');
+// Route::get('/tms/packageData','ProgramController@destroy');
 
 //unused
 // Route::get('tms/register','TmsController@register');

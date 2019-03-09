@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Program;
+use DB;
 
 class ProgramController extends Controller
 {
@@ -12,6 +13,13 @@ class ProgramController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function index()
+    {
+        //fetch data from program table
+      $programs = DB::table('programs')->get()->toArray();
+      return view('tms.packageData', compact('programs')); 
+    }
    
       public function program()
     {
@@ -57,7 +65,7 @@ class ProgramController extends Controller
 
         
         $program->save();
-        return redirect()->to('/tms/program')->with('success','Data Added');
+        return redirect()->to('tms/packageData')->with('success','Data Added');
     }
 
     /**
@@ -68,7 +76,7 @@ class ProgramController extends Controller
      */
     public function show($id)
     {
-        //
+      
     }
 
     /**
@@ -79,7 +87,9 @@ class ProgramController extends Controller
      */
     public function edit($id)
     {
-        //
+          $program= Program::find($id);
+        return view('tms.packageEdit', compact('program','id'));
+
     }
 
     /**
@@ -91,7 +101,19 @@ class ProgramController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+             'program_name' => 'required',
+           'detail'       =>  'required',
+           'image'        =>  'required', 
+
+        ]);
+
+        $program= Program::find($id);
+        $program->program_name=$request->get('program_name');
+        $program->detail=$request->get('detail');
+        $program->image=$request->get('image');
+        $program->save();
+        return redirect()->to('tms/packageData')->with('success', 'Data Updated');
     }
 
     /**
@@ -102,6 +124,8 @@ class ProgramController extends Controller
      */
     public function destroy($id)
     {
-        //
+    //     $program = Program::find($id);
+    //     $program->delete();
+    //     return redirect()->to('tms/packageData')->with('success','Data Delete');
     }
 }
