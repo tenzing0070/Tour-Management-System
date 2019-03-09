@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2019 at 05:53 PM
+-- Generation Time: Mar 09, 2019 at 03:15 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -37,13 +37,6 @@ CREATE TABLE `demos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `demos`
---
-
-INSERT INTO `demos` (`id`, `bookdate`, `duration`, `nop`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '2019/3/3', '5 days', 'wa', NULL, '2019-03-06 10:50:03', '2019-03-06 10:50:03');
 
 -- --------------------------------------------------------
 
@@ -90,9 +83,18 @@ CREATE TABLE `programs` (
   `id` int(10) UNSIGNED NOT NULL,
   `program_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `detail` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `programs`
+--
+
+INSERT INTO `programs` (`id`, `program_name`, `detail`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
+(6, 'bhaktapur', 'daawdawadawa', 'awda', NULL, '2019-03-09 08:27:33', '2019-03-09 08:27:33');
 
 -- --------------------------------------------------------
 
@@ -121,8 +123,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `address`, `phone`, `nationality`, `email`, `email_verified_at`, `password`, `userTypeId`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', 'thamel', '9988776655', 'Nepali', 'admin@hotmail.com', NULL, '$2y$10$9Yaky2iIdeshstxf7RtEGee8qRwLW7bKKzxBA8DEO0kkDtqwIcaVa', 1, '5wGVMpLzMZOCAb3Vc9jx3w5jxAjkc4fXubFLMTkMG9PIRlH5qlFi4jmdeL8q', '2019-03-06 10:40:40', '2019-03-06 10:40:40'),
-(3, 'dawa', 'dawa', 'thamel', '999999999', 'nepali', 'dawa@hotmail.com', NULL, '$2y$10$kukn59nZB845pdylkrHFeOmaVrL23BQaWJByLpD.t2Hx1GrwWtlYa', 2, 'G8ei3nHiQBaRTruSCw23Zy7fGGyBReGdFaFF3O2OzdGeiT2rWkNXINXVxqP8', '2019-03-06 10:49:35', '2019-03-06 10:49:35');
+(1, 'admin', 'admin', 'thamel', '9898989898', 'nepali', 'admin@hotmail.com', NULL, '$2y$10$oIjGJX3BClUi8jQ4nr.Me.zEHlJwrxCwzeCeDyFLfwLaN1nrreRiC', 1, 'K8KXAf1u9jM7gIBNLK6BRjHoJ6dBDOO1sG54RxuQnvjiltGO3DYeSPftN6ot', '2019-03-09 04:03:03', '2019-03-09 04:03:03');
 
 -- --------------------------------------------------------
 
@@ -196,7 +197,7 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `demos`
 --
 ALTER TABLE `demos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -208,13 +209,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `programs`
 --
 ALTER TABLE `programs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_type`

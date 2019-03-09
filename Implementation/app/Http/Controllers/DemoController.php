@@ -65,7 +65,7 @@ class DemoController extends Controller
     $demo->save();
     return redirect()->to('tms/demoBooking')->with('Success, Data Added');
                                 
-    }
+}
 
     /**
      * Display the specified resource.

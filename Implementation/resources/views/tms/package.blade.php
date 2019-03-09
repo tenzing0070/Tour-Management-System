@@ -3,6 +3,13 @@
 <html lang="">
 <head>
 <title>Packages</title>
+<style>
+.bhaktapur{
+  height: "300";
+  width:"300";
+  color:"Black";
+}
+</style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -53,6 +60,8 @@
           <header class="heading">Select Package</header>
           <ul class="nospace clear">
             <li class="one_quarter first"><a href="{!! url('tms/demoBooking') !!}"><img src="../images/demo/gallery/06.jpg" alt=""></a></li>
+              <div class='bhaktapur' >
+              </div>
             <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/03.jpg" alt=""></a></li>
             <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/06.jpg" alt=""></a></li>
             <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/01.png" alt=""></a></li>

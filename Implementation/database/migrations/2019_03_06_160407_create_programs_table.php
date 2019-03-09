@@ -17,6 +17,8 @@ class CreateProgramsTable extends Migration
             $table->increments('id');
             $table->string('program_name');//varchar(255)
             $table->string('detail');
+            $table->string('image');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
