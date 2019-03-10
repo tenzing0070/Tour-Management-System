@@ -18,6 +18,7 @@ class CreateProgramsTable extends Migration
             $table->string('program_name');//varchar(255)
             $table->string('detail');
             $table->string('image');
+            $table->float('price');
             $table->rememberToken();
             $table->timestamps();
         });

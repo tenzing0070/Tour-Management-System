@@ -24,6 +24,7 @@
 					<th>Package Name</th>
 					<th>Package Details</th>
 					<th>Package Image</th>
+					<th>Package Price</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -32,11 +33,21 @@
 				<tr>
 					<td>{{$row->program_name}}</td>
 					<td>{{$row->detail}}</td>
-					<td>{{$row->image}}</td>
-					<td><a href="
-						{{action('ProgramController@edit', '$row->id')}}">Edit</a></td>
-
+					
+					<td>
+						
+							<img src="/{{$row->image}}"  class="img-fluid image-thumbnail"  style="height:150px; width:200px">
 				
+						
+					
+					</td>
+					<td>{{$row->price}}</td>
+					
+					<td><a href="
+						{{url('/tms/packageEdit',$row->id)}}">Edit</a></td>
+
+
+				</tr>
 
 				@endforeach	
 		</table>

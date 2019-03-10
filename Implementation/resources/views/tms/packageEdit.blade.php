@@ -17,7 +17,7 @@
 		</ul>
 		@endif
 
-			<form method="post" action="{{action('ProgramController@update', $id)}}">
+			<form method="post" action="{!!url{'/packageEdit', {{ $programs->id)!!}">
 @csrf
 	<input type="hidden" name="_method" value="PATCH" />
 	<div class="form-group">
@@ -28,6 +28,9 @@
 		</div>
 	<div class="form-group">
 		<input type="text" name="image" class="form-control" value="{{$program->image}}" placeholder="Enter package image" />
+		</div>
+	<div class="form-group">
+		<input type="text" name="price" class="form-control" value="{{$program->price}}" placeholder="Enter package price" />
 		</div>
 		<div class="form-group">
 			<input type="submit" class="btn btn-primary"value="Edit" />

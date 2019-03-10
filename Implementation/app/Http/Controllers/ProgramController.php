@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Program;
+use Illuminate\Http\Request;
+
 use DB;
 
 class ProgramController extends Controller
@@ -13,6 +13,7 @@ class ProgramController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
 
     public function index()
     {
@@ -37,35 +38,53 @@ class ProgramController extends Controller
     {
         // will load create.balde.php view file
                 return view('tms/program');
-
-        
+ 
     }
+
+   
+
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
+     **/
     public function store(Request $request)
     {
-        $this->validate(request(),[
-           'program_name' => 'required',
-           'detail'       =>  'required',
-           'image'        =>  'required', 
-        ]);
+       
+
         $program = new Program();
 
-           $program->program_name=$request->program_name;
-           $program->detail=$request->detail;
-           $program->image=$request->image;
-            // 'package_name' => $request->get('package_name'),
-            // 'detail' => $request->get('detail')
-            // 'image' => $request->get('image')
+        $pictureInfo = $request->file('image');
 
+        $picName = $pictureInfo->getClientOriginalName();
+
+        $folder = "uploads/gallery/";
+
+        $pictureInfo->move($folder,$picName);
+
+        $picUrl = $folder.$picName;
+
+            //already exist validation
+
+            if(Program::where('image', '=', $picUrl)->exists()) 
+        {
+            return redirect('/tms/program')->with('itemNameExists','Same image file name found. Please enter again ');
+
+        }
+            else
+            {
+                $program->program_name=$request->program_name;
+           $program->detail=$request->detail;
+           $program->image=$picUrl;
+           $program->price=$request->price;
         
         $program->save();
         return redirect()->to('tms/packageData')->with('success','Data Added');
+            }
+
+         
     }
 
     /**
@@ -87,8 +106,8 @@ class ProgramController extends Controller
      */
     public function edit($id)
     {
-          $program= Program::find($id);
-        return view('tms.packageEdit', compact('program','id'));
+          //$program= Program::find($id);
+        return view('tms.packageEdit');
 
     }
 
@@ -105,13 +124,15 @@ class ProgramController extends Controller
              'program_name' => 'required',
            'detail'       =>  'required',
            'image'        =>  'required', 
+           'price'         =>   'required', 
 
         ]);
 
         $program= Program::find($id);
         $program->program_name=$request->get('program_name');
         $program->detail=$request->get('detail');
-        $program->image=$request->get('image');
+       $program->image=$request->get('image');
+        $program->price=$request->get('price');
         $program->save();
         return redirect()->to('tms/packageData')->with('success', 'Data Updated');
     }
@@ -128,4 +149,6 @@ class ProgramController extends Controller
     //     $program->delete();
     //     return redirect()->to('tms/packageData')->with('success','Data Delete');
     }
+
+   
 }
