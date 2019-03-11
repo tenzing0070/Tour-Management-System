@@ -5,7 +5,7 @@
 		<br />
 		<h3 align="center">Add Package details</h3>
 		<br />
-		@if (count($errors)>0)
+		 @if (count($errors)>0)
 		<div class="alert alert-danger">
 			<ul>
 				@foreach($errors->all() as $error)

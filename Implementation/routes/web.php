@@ -58,6 +58,7 @@ Route::get('/tms/packageData','ProgramController@index');
 //package edit,update,delete
 Route::get('tms/packageEdit/{id}','ProgramController@edit');
 Route::post('/tms/packageEdit/{id}','ProgramController@create');
+Route::delete('tms/packageEdit/{id}','ProgramController@destroy');
 //Route::get('/tms/packageEdit/{$id}','ProgramController@create');
 
 // Route::get('/tms/packageEdit','ProgramController@update');

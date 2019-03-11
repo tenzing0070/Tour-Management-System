@@ -75,7 +75,7 @@ class ProgramController extends Controller
         }
             else
             {
-                $program->program_name=$request->program_name;
+            $program->program_name=$request->program_name;
            $program->detail=$request->detail;
            $program->image=$picUrl;
            $program->price=$request->price;
@@ -145,9 +145,9 @@ class ProgramController extends Controller
      */
     public function destroy($id)
     {
-    //     $program = Program::find($id);
-    //     $program->delete();
-    //     return redirect()->to('tms/packageData')->with('success','Data Delete');
+         $program = Program::find($id);
+         $program->delete();
+         return redirect()->to('tms/packageData')->with('success','Data Delete');
     }
 
    
