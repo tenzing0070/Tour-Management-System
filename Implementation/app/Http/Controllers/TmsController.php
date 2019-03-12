@@ -70,6 +70,10 @@ class TmsController extends Controller
     }
 
      
+     public function dashboard()
+     {
+        return view('tms.admin.dashboard');
+     }
     
 
 

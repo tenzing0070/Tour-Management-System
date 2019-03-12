@@ -44,7 +44,7 @@
               <li><a href="{!! url('tms/contact') !!}">Contact</a></li>
               &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
               <li class="nav-item">
-                <a class="link display-5" style="color: #d2cf09">{{ Auth::user()->name}}
+                <a class="link  display-5" style="color: #d2cf09">{{ Auth::user()->name}}
           </a>
            
           </li>
