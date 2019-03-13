@@ -61,7 +61,7 @@ Route::post('/tms/packageEdit/{id}','ProgramController@create');
 Route::delete('tms/packageEdit/{id}','ProgramController@destroy');
 
 //pictureadd,
-Route::get('/tms/pictureAdmin','PictureController@create');
+Route::get('/tms/pictureAdmin','PictureController@index');
 Route::post('/tms/pictureAdmin','PictureController@store');
 
 //pic delete
@@ -74,8 +74,8 @@ Route::delete('tms/pictureAdmin/{id}','PictureController@destroy');
 // 	return view('tms/packageData');
 // });
 
-//admin
-// Route::get('tms/admin/dashboard','TmsController@dashboard');
+
+Route::get('tms/admin/dashboard','TmsController@dashboard');
 
 //Route::get('/tms/packageEdit/{$id}','ProgramController@create');
 

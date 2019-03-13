@@ -131,7 +131,7 @@ class ProgramController extends Controller
         $program= Program::find($id);
         $program->program_name=$request->get('program_name');
         $program->detail=$request->get('detail');
-       $program->image=$request->get('image');
+        $program->image=$request->get('image');
         $program->price=$request->get('price');
         $program->save();
         return redirect()->to('tms/packageData')->with('success', 'Data Updated');

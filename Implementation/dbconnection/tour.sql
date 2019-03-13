@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2019 at 07:18 PM
+-- Generation Time: Mar 09, 2019 at 03:15 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -59,8 +59,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2019_02_25_051234_create_table_user_type', 1),
 (3, '2019_03_03_055319_create_demos_table', 1),
 (4, '2019_03_06_160407_create_programs_table', 1),
-(5, '2019_03_06_161653_create_users_table', 1),
-(6, '2019_03_12_102537_create_picture_table', 2);
+(5, '2019_03_06_161653_create_users_table', 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +84,6 @@ CREATE TABLE `programs` (
   `program_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `detail` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` double(8,2) NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -95,9 +93,8 @@ CREATE TABLE `programs` (
 -- Dumping data for table `programs`
 --
 
-INSERT INTO `programs` (`id`, `program_name`, `detail`, `image`, `price`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'dada', 'adad', 'uploads/gallery/hahahahahahah.jfif', 333.00, NULL, '2019-03-12 04:34:33', '2019-03-12 04:34:33'),
-(4, 'asda', 'asdasd', 'uploads/gallery/thisishowe.jfif', 333.00, NULL, '2019-03-12 12:04:27', '2019-03-12 12:04:27');
+INSERT INTO `programs` (`id`, `program_name`, `detail`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
+(6, 'bhaktapur', 'daawdawadawa', 'awda', NULL, '2019-03-09 08:27:33', '2019-03-09 08:27:33');
 
 -- --------------------------------------------------------
 
@@ -126,8 +123,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `address`, `phone`, `nationality`, `email`, `email_verified_at`, `password`, `userTypeId`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', 'thamel', '980989809', 'nepali', 'admin@hotmail.com', NULL, '$2y$10$B4T7IzuOzkl4sbgTcXWF3uJTJs6BnxQyrF.hWroyqKTGSk5TkFsqm', 1, 'x64zTKGbkzDMg4ep1tIi5nIExjl7i8pEp7GdlOaAH5KowrNVhI7bUIMYWpOb', '2019-03-11 11:53:30', '2019-03-11 11:53:30'),
-(2, 'dawa', 'dawa', 'jorpati', '9876787877', 'nepali', 'dawa@hotmail.com', NULL, '$2y$10$XHob.sOoR/jbWnUqapkOMumQBOe3qmYeO78upCNF8BNZGGFkGIgmG', 2, 'k1EgNrhM1HF3bc6eVzYCf4ZCNJplrPtOZkHZuQT4Pk5uBRzu5Z9FOo09ngbI', '2019-03-11 11:54:16', '2019-03-11 11:54:25');
+(1, 'admin', 'admin', 'thamel', '9898989898', 'nepali', 'admin@hotmail.com', NULL, '$2y$10$oIjGJX3BClUi8jQ4nr.Me.zEHlJwrxCwzeCeDyFLfwLaN1nrreRiC', 1, 'K8KXAf1u9jM7gIBNLK6BRjHoJ6dBDOO1sG54RxuQnvjiltGO3DYeSPftN6ot', '2019-03-09 04:03:03', '2019-03-09 04:03:03');
 
 -- --------------------------------------------------------
 
@@ -207,19 +203,19 @@ ALTER TABLE `demos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `programs`
 --
 ALTER TABLE `programs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_type`

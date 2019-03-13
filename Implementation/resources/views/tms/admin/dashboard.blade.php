@@ -9,15 +9,15 @@
   <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
   <meta name="description" content="">
   <title>Admin</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/gallery/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/web/assets/mobirise-icons/mobirise-icons.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/tether/tether.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/dropdown/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/theme/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/gallery/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/mobirise/css/mbr-additional.css" type="text/css') }}">
   
   
   
@@ -39,8 +39,8 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="https://mobirise.co">
-                         <img src="assets/images/logo2.png" alt="Mobirise" style="height: 3.8rem;">
+                    <a href="{{ url ('assets/https://mobirise.co') }}">
+                         <img src="{{ url('assets/images/logo2.png') }}" alt="Mobirise" style="height: 3.8rem;">
                     </a>
                 </span>
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://mobirise.co">
@@ -49,7 +49,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.co">
+                    <a class="nav-link link text-white display-4" href="{{ url('assets/https://mobirise.co') }}">
                         <br></a>
                 </li></ul>
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-secondary display-4" href="https://mobirise.co">Logout</a></div>
@@ -57,32 +57,50 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/o">free portfolio web templates</a></section><section class="mbr-gallery mbr-slider-carousel cid-rkuQxrFmwK" id="gallery2-a">
+<section class="engine"><a href="{{ url('assets/https://mobirise.info/o') }}">free portfolio web templates</a></section><section class="mbr-gallery mbr-slider-carousel cid-rkuQxrFmwK" id="gallery2-a">
 
     
 
     <div class="container">
-        <div><!-- Filter --><div class="mbr-gallery-filter container gallery-filter-active"><ul buttons="0"><li class="mbr-gallery-filter-all"><a class="btn btn-md btn-primary-outline active display-7" href="">All</a></li></ul></div><!-- Gallery --><div class="mbr-gallery-row"><div class="mbr-gallery-layout-default"><div><div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Awesome"><div href="#lb-gallery2-a" data-slide-to="0" data-toggle="modal"><img src="assets/images/background1.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Responsive"><div href="#lb-gallery2-a" data-slide-to="1" data-toggle="modal"><img src="assets/images/background2.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Creative"><div href="#lb-gallery2-a" data-slide-to="2" data-toggle="modal"><img src="assets/images/background3.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Animated"><div href="#lb-gallery2-a" data-slide-to="3" data-toggle="modal"><img src="assets/images/background4.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Awesome"><div href="#lb-gallery2-a" data-slide-to="4" data-toggle="modal"><img src="assets/images/background5.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Awesome"><div href="#lb-gallery2-a" data-slide-to="5" data-toggle="modal"><img src="assets/images/background6.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Responsive"><div href="#lb-gallery2-a" data-slide-to="6" data-toggle="modal"><img src="assets/images/background7.jpg" alt="" title=""><span class="icon-focus"></span></div></div><div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Animated"><div href="#lb-gallery2-a" data-slide-to="7" data-toggle="modal"><img src="assets/images/background8.jpg" alt="" title=""><span class="icon-focus"></span></div></div></div></div><div class="clearfix"></div></div></div><!-- Lightbox --><div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery2-a"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><div class="carousel-inner"><div class="carousel-item active"><img src="assets/images/background1.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background2.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background3.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background4.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background5.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background6.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background7.jpg" alt="" title=""></div><div class="carousel-item"><img src="assets/images/background8.jpg" alt="" title=""></div></div><a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery2-a"><span class="mbri-left mbr-iconfont" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#lb-gallery2-a"><span class="mbri-right mbr-iconfont" aria-hidden="true"></span><span class="sr-only">Next</span></a><a class="close" href="#" role="button" data-dismiss="modal"><span class="sr-only">Close</span></a></div></div></div></div></div>
-    </div>
 
+        <div><!-- Filter -->
+          <div class="mbr-gallery-filter container gallery-filter-active">
+            <ul buttons="0">
+              <li class="mbr-gallery-filter-all"><a class="btn btn-md btn-primary-outline active display-7" href="">All</a>
+          </li>
+          <li>
+              <a class="btn btn-md btn-primary-outline display-7 active" href="">Awesome</a>
+            </li>
+            <li>
+              <a class="btn btn-md btn-primary-outline display-7" href="">Responsive</a>
+            </li>
+            <li>
+              <a class="btn btn-md btn-primary-outline display-7" href="">Creative</a>
+            </li>
+        </ul>
+      </div>
+
+            
+    </div>
+</div>
 </section>
 
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/dropdown/js/script.min.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
-  <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
-  <script src="assets/masonry/masonry.pkgd.min.js"></script>
-  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  <script src="assets/gallery/player.min.js"></script>
-  <script src="assets/gallery/script.js"></script>
-  <script src="assets/slidervideo/script.js"></script>
+  <script src="{{ url('assets/web/assets/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url('assets/popper/popper.min.js') }}"></script>
+  <script src="{{ url('assets/tether/tether.min.js') }}"></script>
+  <script src="{{ url('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url('assets/smoothscroll/smooth-scroll.js') }}"></script>
+  <script src="{{ url('assets/dropdown/js/script.min.js') }}"></script>
+  <script src="{{ url('assets/touchswipe/jquery.touch-swipe.min.js') }}"></script>
+  <script src="{{ url('assets/vimeoplayer/jquery.mb.vimeo_player.js') }}"></script>
+  <script src="{{ url('assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js') }}"></script>
+  <script src="{{ url('assets/masonry/masonry.pkgd.min.js') }}"></script>
+  <script src="{{ url('assets/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url('assets/theme/js/script.js') }}"></script>
+  <script src="{{ url('assets/gallery/player.min.js') }}"></script>
+  <script src="{{ url('assets/gallery/script.js') }}"></script>
+  <script src="{{ url('assets/slidervideo/script.js') }}"></script>
   
   
 </body>
