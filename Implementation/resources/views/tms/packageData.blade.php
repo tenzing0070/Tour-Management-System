@@ -25,6 +25,7 @@
 					<th>Package Details</th>
 					<th>Package Image</th>
 					<th>Package Price</th>
+					<th>Hotel</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -37,6 +38,7 @@
 							<img src="/{{$row->image}}"  class="img-fluid image-thumbnail"  style="height:150px; width:200px">
 					</td>
 					<td>{{$row->price}}</td>
+					<td>{{$row->hotel}}</td>
 					<td>
 						<a href="{{url('/tms/packageEdit',$row->id)}}">Edit</a>
 					</td>
@@ -66,7 +68,7 @@
 
 </div>
 
-<<!-- script>
+<!-- script>
 	$(document).ready(function(){
 
 

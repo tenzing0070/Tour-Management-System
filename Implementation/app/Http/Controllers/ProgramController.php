@@ -14,7 +14,7 @@ class ProgramController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
+//admin add package
     public function index()
     {
         //fetch data from program table
@@ -79,6 +79,7 @@ class ProgramController extends Controller
            $program->detail=$request->detail;
            $program->image=$picUrl;
            $program->price=$request->price;
+           $program->hotel=$request->hotel;
         
         $program->save();
         return redirect()->to('tms/packageData')->with('success','Data Added');
@@ -124,7 +125,8 @@ class ProgramController extends Controller
              'program_name' => 'required',
            'detail'       =>  'required',
            'image'        =>  'required', 
-           'price'         =>   'required', 
+           'price'         =>   'required',
+           'hotel'         =>   'required',  
 
         ]);
 
@@ -133,6 +135,7 @@ class ProgramController extends Controller
         $program->detail=$request->get('detail');
         $program->image=$request->get('image');
         $program->price=$request->get('price');
+        $program->hotel=$request->get('hotel');
         $program->save();
         return redirect()->to('tms/packageData')->with('success', 'Data Updated');
     }

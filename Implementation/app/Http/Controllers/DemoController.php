@@ -22,7 +22,7 @@ class DemoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         return view('tms/demoBooking');
     }
@@ -40,10 +40,10 @@ class DemoController extends Controller
                 // 'education'=>'required',
                 // 'age'=>'required',
 
-                // 'packagename'=>'required',
-                // 'stay'=>'required',
-                // 'cost'=>'required',
-            
+                'packagename'=>'required',
+                'stay'=>'required',
+                'cost'=>'required',
+                'hotel'=>'required',
                 'bookdate'=>'required',
                 'duration'=>'required',
                 'nop'=>'required',
@@ -55,10 +55,10 @@ class DemoController extends Controller
     // $demo->education=$request->education;
     // $demo->age=$request->age;
 
-    // $demo->packagename=$request->packagename;
-    // $demo->stay=$request->stay;
-    // $demo->cost=$request->cost;
-
+    $demo->PackageName=$request->PackageName;
+    $demo->detail=$request->detail;
+    $demo->cost=$request->cost;
+    $demo->hotel$request->hotel
     $demo->bookdate=$request->bookdate;
     $demo->duration=$request->duration;
     $demo->nop=$request->nop;
@@ -75,7 +75,8 @@ class DemoController extends Controller
      */
     public function show($id)
     {
-        //
+         $programs = DB::table('programs')->get()->toArray();
+        return view('tms.package', compact('programs'));
     }
 
     /**

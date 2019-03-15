@@ -12,6 +12,7 @@ class PictureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //admin pic add
     public function index()
     {
         $picture = DB::table('picture')->get()->toArray();
@@ -90,7 +91,8 @@ class PictureController extends Controller
      */
     public function show($id)
     {
-        //
+         $picture = DB::table('picture')->get()->toArray();
+      return view('tms.gallery', compact('picture')); 
     }
 
     /**

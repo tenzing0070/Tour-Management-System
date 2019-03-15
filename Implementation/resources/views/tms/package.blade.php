@@ -51,6 +51,7 @@
 </div>
 
 <div class="wrapper row3">
+
   <main class="hoc container clear"> 
    
     <div class="content"> 
@@ -59,17 +60,17 @@
         <figure>
           <header class="heading">Select Package</header>
           <ul class="nospace clear">
-            <li class="one_quarter first"><a href="{!! url('tms/demoBooking') !!}"><img src="../images/demo/gallery/06.jpg" alt=""></a></li>
-              <div class='bhaktapur' >
-              </div>
-            <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/03.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/06.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter first"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/06.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/05.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="{!! url('tms/bookpackage') !!}"><img src="../images/demo/gallery/04.jpg" alt=""></a></li>
-          
+
+            
+              @foreach($programs as $row)
+              <form action="{!! url('tms/demoBooking',$row->id) !!}">
+              <li class="one_quarter"><img src="/{{$row->image}}" alt="">
+                <button type="submit" >View info</button>
+            </li>
+          </form>
+
+
+            @endforeach
           </ul>
           
         </figure>

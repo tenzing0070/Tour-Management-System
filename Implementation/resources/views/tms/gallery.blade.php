@@ -51,7 +51,10 @@
         <figure>
           <header class="heading">Travellers moments</header>
           <ul class="nospace clear">
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
+
+        
+
+            <li class="one_quarter first"><a href="#"><img src="../picture/image/pikey.jpg" alt=""></a></li>
             <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
             <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
             <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>

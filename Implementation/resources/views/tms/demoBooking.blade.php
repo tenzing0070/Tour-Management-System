@@ -34,37 +34,46 @@
     
         <div class="form-wrap">
         
-        	 <form method="POST" action="{!!url('/tms/demoBooking')!!}">
-@csrf
+
 <li class="nav-item">
                 <a class="link display-5" style="color: #d2cf09"> 
 User:{{ Auth::user()->name}}
           </a>
+@foreach($programs as $program)
 
- <input type="submit" name="packagename" value="Bhaktapur package" class="btn btn-danger"> 
-<input type="submit" name="stay" value="Sunshine Hotel" class="btn btn-danger">
-<input type="submit" name="cost" value="5000/week/person" class="btn btn-danger">
+<form method="POST" action="{!!url('/tms/demoBooking',$program->id)!!}">
+             
+@csrf
+ <input type="text" name="PackageName" value="{{$program->program_name}}" class="btn btn-danger"> 
+<input type="text" name="detail" value="{{$program->detail}}" class="btn btn-danger">
+<input type="text" name="cost" value="{{$program->price}}" class="btn btn-danger">
+<input type="text" name="hotel" value="{{$program->hotel}}" class="btn btn-danger">
+
+
 
 
 <div class="bnr-right">
                 <label class="inputLabel">From</label>
-                <input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy"  name="bookdate" required="">
+                <input class="date" id="datepicker" type="date" placeholder="dd-mm-yyyy"  name="from_date" required="">
             </div>
-<!-- <input type="text" name="bookdate" placeholder="Enter your bookdate">  -->
+
 <div class="bnr-right">
                 <label class="inputLabel">To</label>
-                <input class="date" id="datepicker1" type="text" placeholder="dd-mm-yyyy" name="duration" required="">
+                <input class="date" id="datepicker1" type="date" placeholder="dd-mm-yyyy" name="to_date" required="">
             </div>
-<!-- <input type="text" name="duration" placeholder="No of week">  -->
+
 <input type="text" name="nop" placeholder="Enter no of people">
-            
-                <input type="submit" name="Register" value="Book" class="btn btn-danger">
 
-			
 
-				<a href="{!! url('tms/index1') !!}"><button type="submit" class="btn btn-danger"> {{ __('Cancel') }}</a>
-            
+                  <input type="hidden" name="userid" value="{{Auth::user()->id}}" class="btn btn-danger">
+ 
+                <input type="submit" name="book" value="Book" class="btn btn-danger">
+
             </form>
+
+                <a href="{!! url('tms/index1') !!}"><button type="submit" class="btn btn-danger"> {{ __('Cancel') }}</a>
+
+        @endforeach
         
         </div>
     

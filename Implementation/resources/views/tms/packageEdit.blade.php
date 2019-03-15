@@ -32,6 +32,9 @@
 	<div class="form-group">
 		<input type="text" name="price" class="form-control" value="{{$program->price}}" placeholder="Enter package price" />
 		</div>
+	<div class="form-group">
+		<input type="text" name="hotel" class="form-control" value="{{$program->hotel}}" placeholder="Enter Hotel Name" />
+		</div>
 		<div class="form-group">
 			<input type="submit" class="btn btn-primary"value="Edit" />
 		</div>

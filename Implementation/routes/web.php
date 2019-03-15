@@ -24,8 +24,10 @@ Route::get('tms/login','TmsController@login');
 Route::get('tms/registration','TmsController@registration');
 Route::get('tms/gallery','TmsController@gallery');
 Route::get('tms/contact','TmsController@contact');
-Route::get('tms/package','TmsController@package');
-Route::get('tms/bookpackage','TmsController@bookpackage ');
+
+Route::get('tms/package','PackageController@show');
+
+
 
 Route::get('tms/editProfile', function(){
 		return view('tms/editProfile');
@@ -46,8 +48,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //booking
-Route::get('/tms/demoBooking','DemoController@create');
-Route::post('/tms/demoBooking','DemoController@store');
+Route::get('/tms/demoBooking/{id}','PackageController@show2');
+// Route::post('/tms/demoBooking/{id}','DemoController@store');
+Route::post('/tms/demoBooking/{id}','PackageController@create');
+
 //admin package
 Route::get('/tms/program','ProgramController@create');
 Route::post('/tms/program','ProgramController@store');
@@ -59,6 +63,8 @@ Route::get('/tms/packageData','ProgramController@index');
 Route::get('tms/packageEdit/{id}','ProgramController@edit');
 Route::post('/tms/packageEdit/{id}','ProgramController@create');
 Route::delete('tms/packageEdit/{id}','ProgramController@destroy');
+
+
 
 //pictureadd,
 Route::get('/tms/pictureAdmin','PictureController@index');

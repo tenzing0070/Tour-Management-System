@@ -9,15 +9,15 @@
   <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
   <meta name="description" content="">
   <title>Admin</title>
-  <link rel="stylesheet" href="{{ url('assets/web/assets/mobirise-icons/mobirise-icons.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/tether/tether.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap-grid.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap-reboot.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/dropdown/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/theme/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/gallery/style.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/mobirise/css/mbr-additional.css" type="text/css') }}">
+  <link rel="stylesheet" href="{{ url('assets/web/assets/mobirise-icons/mobirise-icons.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/tether/tether.min.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap.min.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap-grid.min.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap-reboot.min.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/dropdown/css/style.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/theme/css/style.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/gallery/style.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url('assets/mobirise/css/mbr-additional.css') }}" type="text/css">
   
   
   
@@ -57,27 +57,22 @@
     </nav>
 </section>
 
-<section class="engine"><a href="{{ url('assets/https://mobirise.info/o') }}">free portfolio web templates</a></section><section class="mbr-gallery mbr-slider-carousel cid-rkuQxrFmwK" id="gallery2-a">
+<section class="mbr-gallery mbr-slider-carousel cid-rkuQxrFmwK" id="gallery2-a">
 
     
 
     <div class="container">
-
+<br><br><br>
         <div><!-- Filter -->
-          <div class="mbr-gallery-filter container gallery-filter-active">
-            <ul buttons="0">
-              <li class="mbr-gallery-filter-all"><a class="btn btn-md btn-primary-outline active display-7" href="">All</a>
-          </li>
-          <li>
-              <a class="btn btn-md btn-primary-outline display-7 active" href="">Awesome</a>
-            </li>
-            <li>
-              <a class="btn btn-md btn-primary-outline display-7" href="">Responsive</a>
-            </li>
-            <li>
-              <a class="btn btn-md btn-primary-outline display-7" href="">Creative</a>
-            </li>
-        </ul>
+          <div class="container">
+            
+              <a class="btn btn-md btn-primary-outline active display-7" style="border-radius: 45px;" href="">View</a>
+              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;"  href="">Package</a>
+              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="">Users</a>
+            
+              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="">Creative</a>
+            
+
       </div>
 
             

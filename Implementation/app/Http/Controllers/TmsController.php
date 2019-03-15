@@ -29,6 +29,7 @@ class TmsController extends Controller
     {
         return view('tms.login');
     }
+     
     //  public function registration()
     // {
     //     return view('tms.registration');
@@ -41,14 +42,8 @@ class TmsController extends Controller
     {
         return view('tms.contact');
     }
-    public function package()
-    {
-        return view('tms.package');
-    }
-    public function bookpackage()
-    {
-        return view('tms.bookpackage');
-    }
+  
+  
     public function register()
     {
         return view('tms.register');

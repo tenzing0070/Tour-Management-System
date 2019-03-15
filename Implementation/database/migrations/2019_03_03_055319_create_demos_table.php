@@ -15,19 +15,19 @@ class CreateDemosTable extends Migration
     {
         Schema::create('demos', function (Blueprint $table) {
              $table->increments('id');
-            //  $table->string('name',100);
-            // $table->string('education',100);
-            // $table->string('age',100);
+            
 
-            // $table->string('packagename',100);
-            // $table->string('stay',100);
-            // $table->string('cost',100);
-             
-            $table->string('bookdate',100);
-            $table->string('duration',100);
+  
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references ('id')->on ('users');
+            
+            $table->dateTime('bookdate');
+            $table->dateTime('from_date');
+            $table->dateTime('to_date');
             $table->string('nop',100);
 
-
+            $table->integer('PackId')->unsigned();
+            $table->foreign('PackId')->references ('id')->on ('programs');
             
             $table->rememberToken();
             $table->timestamps();

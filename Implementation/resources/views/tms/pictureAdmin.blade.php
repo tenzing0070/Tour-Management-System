@@ -37,7 +37,13 @@
 		</form>
 	</div>
 
-
+<!-- if(isset($_POST['submit'])){
+	
+	$filename=$_FILES['image']['pname'];
+	$tmpname=$_FILES['image']['tmp_name'];
+	
+	$filename=$_FILES['image']['pname']
+} -->
 
 
 	<div class="col-md-12">

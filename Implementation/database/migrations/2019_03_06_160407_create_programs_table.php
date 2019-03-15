@@ -19,6 +19,8 @@ class CreateProgramsTable extends Migration
             $table->string('detail');
             $table->string('image');
             $table->float('price');
+            $table->string('hotel');
+           
             $table->rememberToken();
             $table->timestamps();
         });

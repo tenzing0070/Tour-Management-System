@@ -34,6 +34,7 @@
 
 				<input type="file" name="image" class="form-control" placeholder="Enter image" />
 				<input type="text" name="price" class="form-control" placeholder="Enter price" />
+				<input type="text" name="hotel" class="form-control" placeholder="Enter Hotel Name" />
 			</div>
 			<div class="form-group">
 					<input type="submit" class="btn tbn-primary" />

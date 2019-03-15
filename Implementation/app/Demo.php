@@ -8,7 +8,7 @@ class Demo extends Model
 {
     protected $fillable=[
     	// 'name','education','age',
-    	// 'packagename','stay','cost',
+    	'PackageName','detail','cost','hotel',
     	'bookdate','duration','nop',	
     ];
 }
