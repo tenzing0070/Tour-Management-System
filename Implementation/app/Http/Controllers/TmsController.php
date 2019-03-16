@@ -38,10 +38,7 @@ class TmsController extends Controller
     {
         return view('tms.gallery');
     }
-    public function contact()
-    {
-        return view('tms.contact');
-    }
+    
   
   
     public function register()

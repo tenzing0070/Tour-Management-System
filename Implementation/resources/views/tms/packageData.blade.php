@@ -15,6 +15,9 @@
 
 		<div align="right">
 			<a href="{{url('/tms/program')}}" class="btn btn-primary">Add</a>
+		<div align="left">
+			<a href="{!! url('tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
+                                    {{ __('Back') }}</a>
 			<br />
 			<br />
 
@@ -24,8 +27,8 @@
 					<th>Package Name</th>
 					<th>Package Details</th>
 					<th>Package Image</th>
-					<th>Package Price</th>
-					<th>Hotel</th>
+					<th>Package Price/Person</th>
+					<th>Hotel/Stay</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -63,6 +66,7 @@
 				@endforeach	
 		</table>
 	</div>
+</div>
 </div>
 
 

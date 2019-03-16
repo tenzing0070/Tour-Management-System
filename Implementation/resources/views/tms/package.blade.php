@@ -64,6 +64,8 @@
             
               @foreach($programs as $row)
               <form action="{!! url('tms/demoBooking',$row->id) !!}">
+                
+
               <li class="one_quarter"><img src="/{{$row->image}}" alt="">
                 <button type="submit" >View info</button>
             </li>

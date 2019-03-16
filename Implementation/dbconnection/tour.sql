@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2019 at 03:15 PM
+-- Generation Time: Mar 16, 2019 at 09:36 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -30,13 +30,29 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `demos` (
   `id` int(10) UNSIGNED NOT NULL,
-  `bookdate` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `duration` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userId` int(10) UNSIGNED NOT NULL,
+  `bookdate` datetime NOT NULL,
+  `from_date` datetime NOT NULL,
+  `to_date` datetime NOT NULL,
   `nop` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PackId` int(10) UNSIGNED NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `demos`
+--
+
+INSERT INTO `demos` (`id`, `userId`, `bookdate`, `from_date`, `to_date`, `nop`, `PackId`, `remember_token`, `created_at`, `updated_at`) VALUES
+(7, 3, '2019-03-15 22:13:07', '2019-03-15 00:00:00', '2019-03-23 00:00:00', '4', 6, NULL, '2019-03-15 10:43:07', '2019-03-15 10:43:07'),
+(8, 3, '2019-03-15 22:42:16', '2019-03-08 00:00:00', '2019-03-23 00:00:00', '4', 6, NULL, '2019-03-15 11:12:16', '2019-03-15 11:12:16'),
+(9, 3, '2019-03-16 08:56:42', '2019-03-23 00:00:00', '2019-03-30 00:00:00', '8', 7, NULL, '2019-03-15 21:26:42', '2019-03-15 21:26:42'),
+(10, 3, '2019-03-16 09:47:52', '2019-03-16 00:00:00', '2019-03-30 00:00:00', '2', 6, NULL, '2019-03-15 22:17:52', '2019-03-15 22:17:52'),
+(11, 3, '2019-03-16 09:52:30', '2019-03-30 00:00:00', '2019-04-13 00:00:00', '4', 9, NULL, '2019-03-15 22:22:30', '2019-03-15 22:22:30'),
+(12, 3, '2019-03-16 12:36:42', '2019-03-02 00:00:00', '2019-03-03 00:00:00', '5', 6, NULL, '2019-03-16 01:06:42', '2019-03-16 01:06:42'),
+(13, 3, '2019-03-16 13:43:10', '2019-03-09 00:00:00', '2019-03-16 00:00:00', '6', 6, NULL, '2019-03-16 02:13:10', '2019-03-16 02:13:10');
 
 -- --------------------------------------------------------
 
@@ -57,9 +73,11 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_100000_create_password_resets_table', 1),
 (2, '2019_02_25_051234_create_table_user_type', 1),
-(3, '2019_03_03_055319_create_demos_table', 1),
-(4, '2019_03_06_160407_create_programs_table', 1),
-(5, '2019_03_06_161653_create_users_table', 1);
+(3, '2019_03_06_160407_create_programs_table', 1),
+(4, '2019_03_06_161653_create_users_table', 1),
+(5, '2019_03_12_102537_create_picture_table', 1),
+(9, '2019_03_03_055319_create_demos_table', 2),
+(11, '2019_03_16_074711_create_contacts_table', 4);
 
 -- --------------------------------------------------------
 
@@ -84,6 +102,8 @@ CREATE TABLE `programs` (
   `program_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `detail` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` double(8,2) NOT NULL,
+  `hotel` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -93,8 +113,15 @@ CREATE TABLE `programs` (
 -- Dumping data for table `programs`
 --
 
-INSERT INTO `programs` (`id`, `program_name`, `detail`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
-(6, 'bhaktapur', 'daawdawadawa', 'awda', NULL, '2019-03-09 08:27:33', '2019-03-09 08:27:33');
+INSERT INTO `programs` (`id`, `program_name`, `detail`, `image`, `price`, `hotel`, `remember_token`, `created_at`, `updated_at`) VALUES
+(6, 'Dudhkunda tour', 'Trek for a week. High hills, mountains, beautiful lake', 'uploads/gallery/Dudhkunda1-800x420.jpg', 10000.00, 'Local house stay', NULL, '2019-03-15 09:44:39', '2019-03-15 09:44:39'),
+(7, 'Lulka Tour', 'Trek for 10-11 days.', 'uploads/gallery/nepaldomesticflights-lukla-takeoff.jpg', 100000.00, 'Sherpa Hotel', NULL, '2019-03-15 09:46:38', '2019-03-15 09:46:38'),
+(8, 'Junbesi', 'Trek for 6 days. High hills mountains, beautiful village', 'uploads/gallery/junbesi-1024x665.jpg', 10000.00, 'Junbesi Hotel', NULL, '2019-03-15 09:48:02', '2019-03-15 09:48:02'),
+(9, 'Thupten Chholing Gumba', 'High hill monastry located in Junbesi', 'uploads/gallery/Monastery-of-Thuptenchholing-at-Junbesi-Solukhmbu.jpg', 11000.00, 'Summit Hotel', NULL, '2019-03-15 09:49:41', '2019-03-15 09:49:41'),
+(10, 'Salleri Tour', 'Famous Solukhumbu market.', 'uploads/gallery/salleri.jpg', 6000.00, 'Sunny Hotel', NULL, '2019-03-15 09:50:37', '2019-03-15 09:50:37'),
+(11, 'Namche Bazzar', 'Gate way to Everest. Famous Market of Solukhumbu', 'uploads/gallery/jiri-shivalaya-namche-bazar-trek68.jpeg', 100000.00, 'Sherpa Bed and Breakfast Hotel', NULL, '2019-03-15 09:52:14', '2019-03-15 09:52:14'),
+(12, 'Pikey Hills', 'Famous Lower Khumbu trekking way to high hill.', 'uploads/gallery/pikey.jpg', 100000.00, 'Sonam Hotel', NULL, '2019-03-15 09:53:07', '2019-03-15 09:53:07'),
+(13, 'Taksindo Tour', 'Trekking route in Solukhumbu. Beautiful village', 'uploads/gallery/taksindo.jpg', 50000.00, 'Everest Hotel', NULL, '2019-03-15 09:54:38', '2019-03-15 09:54:38');
 
 -- --------------------------------------------------------
 
@@ -123,7 +150,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `address`, `phone`, `nationality`, `email`, `email_verified_at`, `password`, `userTypeId`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', 'thamel', '9898989898', 'nepali', 'admin@hotmail.com', NULL, '$2y$10$oIjGJX3BClUi8jQ4nr.Me.zEHlJwrxCwzeCeDyFLfwLaN1nrreRiC', 1, 'K8KXAf1u9jM7gIBNLK6BRjHoJ6dBDOO1sG54RxuQnvjiltGO3DYeSPftN6ot', '2019-03-09 04:03:03', '2019-03-09 04:03:03');
+(2, 'admin', 'admin', 'thamel', '888888888', 'nepali', 'admin@hotmail.com', NULL, '$2y$10$320PklW4qQpZX0gTwBTf.OX.5fW6oHwYlXcVPtX5E2J9RubAbb8uy', 1, 'KqKiKzRUGitmXftrhhVzhmtWfubXIWyV4eYXVzLBo1iHwb4qyCEQJu9ReE1Y', '2019-03-15 02:10:22', '2019-03-15 02:10:22'),
+(3, 'dawa', 'dawa', 'thamel', '333333333', 'nepali', 'dawa@hotmail.com', NULL, '$2y$10$3.4Dh9MIplw.ysPWqfPbb.9WYZrZVbxFPa/oJ7kx5qUczo/zPzGY.', 2, 'ggD5P0sTg7kXrOnG9IeRi0m39BRPO3mhYKm26qCCWdlIOFTse0U8jena1fec', '2019-03-15 02:10:48', '2019-03-15 21:10:49');
 
 -- --------------------------------------------------------
 
@@ -154,7 +182,9 @@ INSERT INTO `user_type` (`userTypeId`, `userType`, `created_at`, `updated_at`) V
 -- Indexes for table `demos`
 --
 ALTER TABLE `demos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `demos_userid_foreign` (`userId`),
+  ADD KEY `demos_packid_foreign` (`PackId`);
 
 --
 -- Indexes for table `migrations`
@@ -197,25 +227,25 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `demos`
 --
 ALTER TABLE `demos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `programs`
 --
 ALTER TABLE `programs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_type`
@@ -226,6 +256,13 @@ ALTER TABLE `user_type`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `demos`
+--
+ALTER TABLE `demos`
+  ADD CONSTRAINT `demos_packid_foreign` FOREIGN KEY (`PackId`) REFERENCES `programs` (`id`),
+  ADD CONSTRAINT `demos_userid_foreign` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `users`

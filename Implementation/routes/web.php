@@ -22,11 +22,18 @@ Route::get('tms/index','TmsController@index');
 Route::get('tms/index1','TmsController@index1');
 Route::get('tms/login','TmsController@login');
 Route::get('tms/registration','TmsController@registration');
-Route::get('tms/gallery','TmsController@gallery');
-Route::get('tms/contact','TmsController@contact');
+
+//form ko action work
+Route::put('tms/contacts','ContactController@store');
+
+Route::get('tms/contact', function(){
+		return view('tms/contact');
+
+});
 
 Route::get('tms/package','PackageController@show');
 
+Route::get('tms/gallery','PictureController@show');
 
 
 Route::get('tms/editProfile', function(){

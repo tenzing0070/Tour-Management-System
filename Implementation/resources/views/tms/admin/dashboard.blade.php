@@ -52,7 +52,7 @@
                     <a class="nav-link link text-white display-4" href="{{ url('assets/https://mobirise.co') }}">
                         <br></a>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-secondary display-4" href="https://mobirise.co">Logout</a></div>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-secondary display-4" href="{{ route('login')}}">Logout</a></div>
         </div>
     </nav>
 </section>
@@ -67,7 +67,7 @@
           <div class="container">
             
               <a class="btn btn-md btn-primary-outline active display-7" style="border-radius: 45px;" href="">View</a>
-              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;"  href="">Package</a>
+              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;"  href="{!! url('tms/packageData') !!}">Package</a>
               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="">Users</a>
             
               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="">Creative</a>

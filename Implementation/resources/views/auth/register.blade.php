@@ -124,8 +124,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-                                 <a href="{!! url('tms/index1') !!}"button type="submit" class="btn btn-primary"  > 
-                                    {{ __('Back') }}</a>
+                               
                             </div>
                         </div>
 

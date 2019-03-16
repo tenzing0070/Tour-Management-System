@@ -49,28 +49,32 @@
     <div class="content three_quarter"> 
      
       <h1 <h2>Write A Comment</h2>
-        <form action="#" method="post">
+       
+
+        <form method="post" action=" {{url('tms/contacts')}}">
+        @csrf
+        {{method_field('put')}}
           <div class="one_third first">
             <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" required>
+            <input type="text" name="name" class="form-control" size="22" required>
           </div>
           <div class="one_third">
             <label for="email">Email <span>*</span></label>
-            <input type="email" name="email" id="email" value="" size="22" required>
+            <input type="email" name="email" class="form-control"  size="22" required>
           </div>
           <div class="one_third">
-            <label for="url">Address</label>
-            <input type="url" name="url" id="url" value="" size="22">
+            <label for="address">Address</label>
+            <input type="address" name="address" class="form-control" size="22">
           </div>
           <div class="block clear">
             <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+            <textarea name="comment" class="form-control" cols="25" rows="10"></textarea>
           </div>
-          <div>
-            <input type="submit" name="submit" value="Submit Form">
+          
+            <input type="submit" name="submit" value="Submit Form" class="btn btn-danger" >
+
             &nbsp;
-           
-          </div>
+          
         </form>
       </div>
 

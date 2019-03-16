@@ -48,7 +48,7 @@
 
 	<div class="col-md-12">
 		<br />
-		<h3 align="center">Package Data</h3>
+		<h3 align="center">Picture Data</h3>
 		<br />
 		@if($message=Session::get('success'))
 		<div class="alert alert-success">
