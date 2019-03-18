@@ -43,7 +43,14 @@
 					<td>{{$row->price}}</td>
 					<td>{{$row->hotel}}</td>
 					<td>
-						<a href="{{url('/tms/packageEdit',$row->id)}}">Edit</a>
+						<form method="post" class="" action="{{url('/tms/packageEdit',$row->id)}}">
+
+
+						@csrf
+						{!! method_field('GET') !!}
+							<button type="submit" class="btn btn-danger">Edit</button> 
+						</form>
+						<!-- <a href="{{url('/tms/packageEdit',$row->id)}}">Edit</a> -->
 					</td>
 					<td>
 						<form method="post" class="delete_form" action="{{url('/tms/packageEdit',$row->id)}}">

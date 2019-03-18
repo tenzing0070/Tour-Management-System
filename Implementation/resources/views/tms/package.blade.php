@@ -52,6 +52,21 @@
 
 <div class="wrapper row3">
 
+
+<form action="/tms/package" method="POST" role="search">
+     {{ csrf_field() }}
+       <div class="input-group">
+
+         <input type="text" class="form-control" name="search"
+          placeholder="Search package"> 
+          <button type="submit" class="btn btn-primary">
+          </button>
+        
+        </div>
+      </form>
+</div>
+<div class="wrapper row3">
+  
   <main class="hoc container clear"> 
    
     <div class="content"> 
@@ -82,8 +97,6 @@
   
     <div class="clear"></div>
   </main>
-</div>
-<div class="wrapper row3">
     
      
 

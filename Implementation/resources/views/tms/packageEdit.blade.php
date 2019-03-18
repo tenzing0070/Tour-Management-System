@@ -7,39 +7,37 @@
 			<br />
 			<h3>Edit Record</h3>
 			<br />
-			@if(count($errors)>0)
+			
 
-			<div class="alert alert-danger">
-				<ul>
-					@foreach($errors->all()as $error)
-					<li>{{$error}}</li>
-			@endforeach
-		</ul>
-		@endif
-
-			<form method="post" action="{!!url{'/packageEdit', {{ $programs->id)!!}">
+@foreach($program as $data)
+			<form method="post" action="{{ url('tms/packageUpdate', $data->id) }}">
 @csrf
+	{{method_field('put')}}
 	<input type="hidden" name="_method" value="PATCH" />
 	<div class="form-group">
-		<input type="text" name="program_name" class="form-control" value="{{$program->program_name}}" placeholder="Enter package name" />
+		<input type="text" name="program_name" class="form-control" value="{{$data->program_name}}" placeholder="Enter package name" />
 		</div>
 	<div class="form-group">
-		<input type="text" name="detail" class="form-control" value="{{$program->detail}}" placeholder="Enter package detail" />
+		<input type="text" name="detail" class="form-control" value="{{$data->detail}}" placeholder="Enter package detail" />
 		</div>
 	<div class="form-group">
-		<input type="text" name="image" class="form-control" value="{{$program->image}}" placeholder="Enter package image" />
+		<input type="file" name="image" class="form-control" placeholder="Enter package image" />
+		<img src="/{{$data->image}}">
 		</div>
 	<div class="form-group">
-		<input type="text" name="price" class="form-control" value="{{$program->price}}" placeholder="Enter package price" />
+		<input type="text" name="price" class="form-control" value="{{$data->price}}" placeholder="Enter package price" />
 		</div>
 	<div class="form-group">
-		<input type="text" name="hotel" class="form-control" value="{{$program->hotel}}" placeholder="Enter Hotel Name" />
+		<input type="text" name="hotel" class="form-control" value="{{$data->hotel}}" placeholder="Enter Hotel Name" />
 		</div>
+
 		<div class="form-group">
 			<input type="submit" class="btn btn-primary"value="Edit" />
 		</div>
 	</form>
+	@endforeach
 
+</div>
 </div>
 
 @endsection

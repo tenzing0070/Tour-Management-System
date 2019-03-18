@@ -17,9 +17,12 @@ class ProgramController extends Controller
 //admin add package
     public function index()
     {
+
         //fetch data from program table
       $programs = DB::table('programs')->get()->toArray();
-      return view('tms.packageData', compact('programs')); 
+      return view('tms.packageData', compact('programs'));
+
+     
     }
    
       public function program()
@@ -96,7 +99,7 @@ class ProgramController extends Controller
      */
     public function show($id)
     {
-      
+      return view ('tms/packageEdit');
     }
 
     /**
@@ -107,8 +110,9 @@ class ProgramController extends Controller
      */
     public function edit($id)
     {
-          //$program= Program::find($id);
-        return view('tms.packageEdit');
+          
+         $program = DB::table('programs')->where('id',$id)->get()->toArray();
+        return view('tms.packageEdit',compact('program'));
 
     }
 
@@ -121,23 +125,41 @@ class ProgramController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
-             'program_name' => 'required',
-           'detail'       =>  'required',
-           'image'        =>  'required', 
-           'price'         =>   'required',
-           'hotel'         =>   'required',  
+        
 
-        ]);
+        $program = new Program();
+
+        $pictureInfo = $request->file('image');
+
+        $picName = $pictureInfo->getClientOriginalName();
+
+        $folder = "uploads/gallery/";
+
+
+
+
+
+        $picUrl = $folder.$picName;
+
+        if ($picUrl->exists())
+        {
+            $pic=$picName;
+        }
+
+        else
+        {
+            $pictureInfo->move($folder,$picName);
+            $pic=$picName;
+        }
 
         $program= Program::find($id);
-        $program->program_name=$request->get('program_name');
-        $program->detail=$request->get('detail');
-        $program->image=$request->get('image');
-        $program->price=$request->get('price');
-        $program->hotel=$request->get('hotel');
+        $program->program_name=$request->program_name;
+        $program->detail=$request->detail;
+        $program->image=$pic;
+        $program->price=$request->price;
+        $program->hotel=$request->hotel;
         $program->save();
-        return redirect()->to('tms/packageData')->with('success', 'Data Updated');
+        return redirect()->to('/tms/packageData')->with('success', 'Data Updated');
     }
 
     /**

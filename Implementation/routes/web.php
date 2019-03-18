@@ -1,5 +1,7 @@
 <?php
-
+use Illuminate\Support\Facades\Input;
+use App\User;
+use App\Program;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,7 +69,12 @@ Route::post('/tms/program','ProgramController@store');
 Route::get('/tms/packageData','ProgramController@index');
 
 //package edit,update,delete
+
+
 Route::get('tms/packageEdit/{id}','ProgramController@edit');
+
+Route::put('tms/packageUpdate/{id}','ProgramController@update');
+
 Route::post('/tms/packageEdit/{id}','ProgramController@create');
 Route::delete('tms/packageEdit/{id}','ProgramController@destroy');
 
@@ -89,6 +96,18 @@ Route::delete('tms/pictureAdmin/{id}','PictureController@destroy');
 
 
 Route::get('tms/admin/dashboard','TmsController@dashboard');
+
+//serrching
+// Route::any('tms/package',function(){
+// 	$search= Input::get ('search');
+// 	$program=Program::where('program_name','LIKE','%' .$search. '%')->get();
+
+// 	if(count($program)>0)
+// 		return view('tms/package')->withDetails($program)->withQuery ($search);
+// 	else return view ('tms/package')->withMessage('No data found');
+
+
+
 
 //Route::get('/tms/packageEdit/{$id}','ProgramController@create');
 
