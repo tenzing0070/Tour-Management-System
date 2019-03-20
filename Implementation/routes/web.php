@@ -87,6 +87,9 @@ Route::post('/tms/pictureAdmin','PictureController@store');
 //pic delete
 Route::delete('tms/pictureAdmin/{id}','PictureController@destroy');
 
+//admin user booked information display
+Route::get('tms/dataDisplay','DataController@index');
+
 
 //admin open function
 // Route::get('/tms/packageData',function()
