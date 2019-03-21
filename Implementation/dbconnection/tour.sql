@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2019 at 09:36 AM
+-- Generation Time: Mar 20, 2019 at 11:54 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -52,7 +52,10 @@ INSERT INTO `demos` (`id`, `userId`, `bookdate`, `from_date`, `to_date`, `nop`, 
 (10, 3, '2019-03-16 09:47:52', '2019-03-16 00:00:00', '2019-03-30 00:00:00', '2', 6, NULL, '2019-03-15 22:17:52', '2019-03-15 22:17:52'),
 (11, 3, '2019-03-16 09:52:30', '2019-03-30 00:00:00', '2019-04-13 00:00:00', '4', 9, NULL, '2019-03-15 22:22:30', '2019-03-15 22:22:30'),
 (12, 3, '2019-03-16 12:36:42', '2019-03-02 00:00:00', '2019-03-03 00:00:00', '5', 6, NULL, '2019-03-16 01:06:42', '2019-03-16 01:06:42'),
-(13, 3, '2019-03-16 13:43:10', '2019-03-09 00:00:00', '2019-03-16 00:00:00', '6', 6, NULL, '2019-03-16 02:13:10', '2019-03-16 02:13:10');
+(13, 3, '2019-03-16 13:43:10', '2019-03-09 00:00:00', '2019-03-16 00:00:00', '6', 6, NULL, '2019-03-16 02:13:10', '2019-03-16 02:13:10'),
+(14, 3, '2019-03-18 10:24:16', '2019-03-08 00:00:00', '2019-03-22 00:00:00', '2', 6, NULL, '2019-03-17 22:54:16', '2019-03-17 22:54:16'),
+(15, 3, '2019-03-18 11:42:52', '2019-03-30 00:00:00', '2019-03-31 00:00:00', '4', 6, NULL, '2019-03-18 00:12:52', '2019-03-18 00:12:52'),
+(16, 3, '2019-03-20 16:25:37', '2019-03-27 00:00:00', '2019-03-28 00:00:00', '2', 13, NULL, '2019-03-20 04:55:37', '2019-03-20 04:55:37');
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `address`, `phone`, `nationality`, `email`, `email_verified_at`, `password`, `userTypeId`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'admin', 'admin', 'thamel', '888888888', 'nepali', 'admin@hotmail.com', NULL, '$2y$10$320PklW4qQpZX0gTwBTf.OX.5fW6oHwYlXcVPtX5E2J9RubAbb8uy', 1, 'KqKiKzRUGitmXftrhhVzhmtWfubXIWyV4eYXVzLBo1iHwb4qyCEQJu9ReE1Y', '2019-03-15 02:10:22', '2019-03-15 02:10:22'),
-(3, 'dawa', 'dawa', 'thamel', '333333333', 'nepali', 'dawa@hotmail.com', NULL, '$2y$10$3.4Dh9MIplw.ysPWqfPbb.9WYZrZVbxFPa/oJ7kx5qUczo/zPzGY.', 2, 'ggD5P0sTg7kXrOnG9IeRi0m39BRPO3mhYKm26qCCWdlIOFTse0U8jena1fec', '2019-03-15 02:10:48', '2019-03-15 21:10:49');
+(3, 'dawa', 'dawa', 'thamel', '333333333', 'nepali', 'dawa@hotmail.com', NULL, '$2y$10$3.4Dh9MIplw.ysPWqfPbb.9WYZrZVbxFPa/oJ7kx5qUczo/zPzGY.', 2, 'FrUZWUcMqFKSQmWlmuUdoGFrnkNKT8vrudYDaXt8vHlQ2bhRnzSSbwymc1rb', '2019-03-15 02:10:48', '2019-03-15 21:10:49');
 
 -- --------------------------------------------------------
 
@@ -227,7 +230,7 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `demos`
 --
 ALTER TABLE `demos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -239,7 +242,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `programs`
 --
 ALTER TABLE `programs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`

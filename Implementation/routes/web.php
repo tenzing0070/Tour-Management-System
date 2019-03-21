@@ -89,7 +89,8 @@ Route::delete('tms/pictureAdmin/{id}','PictureController@destroy');
 
 //admin user booked information display
 Route::get('tms/dataDisplay','DataController@index');
-
+//booked information pdf print
+Route::get('/tms/dataDisplay/pdf','DataController@pdf');
 
 //admin open function
 // Route::get('/tms/packageData',function()

@@ -14,6 +14,10 @@
 		</div>
 		@endif
 
+		<div align="right">
+			<a href="{{url('tms/dataDisplay/pdf')}}" class="btn btn-primary">Convert into PDF</a>
+			
+
 		<div align="left">
 			<a href="{!! url('tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
                                     {{ __('Back') }}</a>
@@ -45,6 +49,7 @@
 				@endforeach	
 		</table>
 	</div>
+</div>
 
 	</div>
 </div>

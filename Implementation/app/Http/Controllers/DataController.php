@@ -18,6 +18,71 @@ class DataController extends Controller
       return view('tms.DataDisplay', compact('demos')); 
     }
 
+    function get_booked_data()
+    {
+        $demos= DB::table('demos')
+                        ->limit(10)
+                        ->get();
+        return $demos;
+    }
+
+    function pdf()
+    {
+        $pdf = \App::make('dpmpdf.wrapper');
+        $pdf->loadHTML($this->convert_demos_to_html());
+        $pdf->stream();
+    }
+
+    function convert_demos_to_html()
+    {
+        $demos=$this->get_booked_data();
+        $output = '
+        <h3 align="center">Customer Data</h3>
+        <table width="100%" style="border-collapse:collapse; border: 0px;">
+        <tr>
+            <th style="border:1px solid;
+            padding:12px;" width="20%">userId</th>
+            <th style="border:1px solid;
+            padding:12px;" 
+            width="20%">PackId</th>
+            <th style="border:1px solid;
+            padding:12px;" width="20%">bookdate</th>
+            <th style="border:1px solid;
+            padding:12px;" width="20%">from_date</th>
+            <th style="border:1px solid;
+            padding:12px;" width="20%">to_date</th>
+            <th style="border:1px solid;
+            padding:12px;" width="20%">nop</th>
+        </tr>
+
+        ';
+
+        foreach($demos as $row)
+        {
+            $output .='
+        <tr>
+            <td style="border:1px solid;
+            padding:12px; ">' .$row->userId.'</td>
+            <td style="border:1px solid;
+            padding:12px; ">' .$row->PackId.'</td>
+            <td style="border:1px solid;
+            padding:12px; ">' .$row->bookdate.'</td>
+            <td style="border:1px solid;
+            padding:12px; ">' .$row->from_date.'</td>
+            <td style="border:1px solid;
+            padding:12px; ">' .$row->to_date.'</td>
+            <td style="border:1px solid;
+                padding:12px; ">' .$row->nop.'</td>
+        </tr>
+
+            ';
+            
+        }
+        
+        $output .= '</table>';
+        return $output; 
+    }
+
     /**
      * Show the form for creating a new resource.
      *
