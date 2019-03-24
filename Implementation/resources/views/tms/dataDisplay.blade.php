@@ -7,7 +7,6 @@
 		<br />
 		<h3 align="center">Package Booked Customer Information</h3>
 		<br />
-
 		@if($message=Session::get('success'))
 		<div class="alert alert-success">
 				<p>{{$message}}</p>
@@ -15,11 +14,9 @@
 		@endif
 
 		<div align="right">
-			<a href="{{url('tms/dataDisplay/pdf')}}" class="btn btn-primary">Convert into PDF</a>
-			
-
+			<a href="{{url('pdf')}}" class="btn btn-primary">Convert into PDF</a>
 		<div align="left">
-			<a href="{!! url('tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
+			<a href="{!! url('/tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
                                     {{ __('Back') }}</a>
 			<br />
 			<br />

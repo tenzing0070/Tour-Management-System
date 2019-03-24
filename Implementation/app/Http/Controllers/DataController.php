@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class DataController extends Controller
 {
@@ -78,6 +79,7 @@ class DataController extends Controller
             ';
             
         }
+        
         
         $output .= '</table>';
         return $output; 

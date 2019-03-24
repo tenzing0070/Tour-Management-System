@@ -70,7 +70,7 @@
               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;"  href="{!! url('tms/packageData') !!}">Package</a>
               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="{!! url('tms/pictureAdmin') !!}">Image</a>
             
-              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="">Creative</a>
+              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="{!! url('tms/print/users') !!}">Users</a>
             
 
       </div>

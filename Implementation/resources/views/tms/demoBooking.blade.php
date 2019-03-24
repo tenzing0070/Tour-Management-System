@@ -45,13 +45,13 @@ User:{{ Auth::user()->name}} <br><br>
              
 @csrf
     <label class="inputLabel">Package Name</label>
-    <input type="text" name="PackageName" value="{{$program->program_name}}" class="btn btn-danger"> 
+    <input type="text" name="PackageName" value="{{$program->program_name}}" class="btn btn-danger" disabled> 
     <label class="inputLabel">Details</label>
-    <input type="text" name="detail" value="{{$program->detail}}" class="btn btn-danger">
+    <input type="text" name="detail" value="{{$program->detail}}" class="btn btn-danger" disabled>
     <label class="inputLabel">Cost</label>
-    <input type="text" name="cost" value="{{$program->price}}" class="btn btn-danger">
+    <input type="text" name="cost" value="{{$program->price}}" class="btn btn-danger" disabled>
     <label class="inputLabel">Hotel</label>
-    <input type="text" name="hotel" value="{{$program->hotel}}" class="btn btn-danger">
+    <input type="text" name="hotel" value="{{$program->hotel}}" class="btn btn-danger" disabled>
 
 
 

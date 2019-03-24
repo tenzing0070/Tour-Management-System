@@ -17,6 +17,20 @@ Route::get('/', function () {
     return view('tms/index');
 });
 
+Route::get('pdf', function() {
+	$demos = App\demo::all();
+	$pdf = PDF::loadView('tms/dataDisplay',['demos' => $demos]);
+	return $pdf->download('archive.pdf');
+
+});
+
+Route::get('/tms/print/users','PrintController@index');
+Route::get('/prnpriview','PrintController@prnpriview');
+
+
+
+
+
 Route::get('tour','TourController@index');//index
 Route::get('tour/create','TourController@create');
 
@@ -89,8 +103,10 @@ Route::delete('tms/pictureAdmin/{id}','PictureController@destroy');
 
 //admin user booked information display
 Route::get('tms/dataDisplay','DataController@index');
+//print preview
+
 //booked information pdf print
-Route::get('/tms/dataDisplay/pdf','DataController@pdf');
+// Route::get('/tms/dataDisplay/pdf','DataController@pdf');
 
 //admin open function
 // Route::get('/tms/packageData',function()
