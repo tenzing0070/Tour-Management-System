@@ -14,7 +14,8 @@
 		@endif
 
 		<div align="right">
-			<a href="{{url('pdf')}}" class="btn btn-primary">Convert into PDF</a>
+			<a  id="btn-convert" class="btn btn-primary" href="{{url('pdf')}}">Convert to PDF</a>
+			
 		<div align="left">
 			<a href="{!! url('/tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
                                     {{ __('Back') }}</a>

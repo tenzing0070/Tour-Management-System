@@ -1,8 +1,34 @@
-@extends('layouts.my')
+@extends('master')
 @section('content')
-<center>
+
+<div class="row">
+<div class="container col-md-12">
+	
+		<br>
+		<center>
 <h1>User Information List </h1>
-<table class="table" >
+</center>
+<br>
+<div class="panel-heading">
+	<form> 
+		
+         <input type="button" value="Print" onclick="window.print()" /> 
+  
+      </form>
+      <br/>
+      <br/>
+ 
+      <script type="text/javascript">
+			$("button").click(function (){
+			window.print()
+
+			});
+		</script>
+	</div>
+	<br>
+
+<table class="table table-bordered ">
+
 <tr>
 
 		<th>Name</th>
@@ -13,6 +39,8 @@
 		<th>Email</th>
 		<th>Password</th>
 		<th>UserTypeId</th>
+
+
 	</tr>
 @foreach($users as $row)
 <tr>
@@ -27,5 +55,8 @@
 <td>{{ $row->userTypeId }}</td>
 </tr>
 @endforeach
-</center>
+
+</table>
+</div>
+</div>
 @endsection

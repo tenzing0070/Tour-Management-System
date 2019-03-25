@@ -38,7 +38,7 @@ class DataController extends Controller
     {
         $demos=$this->get_booked_data();
         $output = '
-        <h3 align="center">Customer Data</h3>
+        <h3 align="center">Package Booked Customer Information</h3>
         <table width="100%" style="border-collapse:collapse; border: 0px;">
         <tr>
             <th style="border:1px solid;
