@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="{{ url('assets/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" media="all">
+
 </head>
 <body id="top">
 
@@ -42,28 +44,31 @@
 
 </div>
 
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
+<div class="wrapper row3 col-md-12">
+  <main class="hoc container clear col-md-12"> 
 
-    <div class="content"> 
+    <div class="content col-md-12"> 
       
-      <div id="gallery">
+      <div id="gallery"class="col-md-12">
         <figure>
           <header class="heading">Travellers moments</header>
-          <ul class="nospace clear">
-
         
 
               @foreach($picture as $row)
-              <form action="{!! url('tms/pictureAdmin',$row->id) !!}">
+            
+                <div style="float: left; width: 30%;">
 
-                 <li class="one_quarter"><img src="/{{$row->picture}}" alt="">
-                
-              </li>
-            </form>
+                 <img class="img-fluid img-thumbnail" style="width:80%; height: 150px;" src="/{{$row->picture}}" alt="">
+                  <div style="float: left; width: 80%;">
+                    <center>
+              <b>{{$row->pname}}</b>
+            </center>
+            </div>
+                 <br><br>
+<br>              </div>
+            
 
            @endforeach
-          </ul>
           
         </figure>
       </div>

@@ -71,7 +71,7 @@
             <textarea name="comment" class="form-control" cols="25" rows="10"></textarea>
           </div>
           
-            <input type="submit" name="submit" value="Submit Form" class="btn btn-danger" >
+            <input type="submit" name="submit" value="Submit Form" class="btn btn-danger" style="color:black;">
 
             &nbsp;
           

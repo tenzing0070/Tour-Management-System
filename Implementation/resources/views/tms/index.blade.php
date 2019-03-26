@@ -126,59 +126,23 @@
 </div>
 
    
-    <div class="clear"></div>
-  </section>
-</div>
-
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
-
     
-        <footer>
-          
-          </ul>
-        </footer>
-      </article>
-      <article class="one_third">
-        
-        <footer>
-          
-          </ul>
-        </footer>
-      </article>
-      <article class="one_third">
-        
-        <footer>
-          
-        </footer>
-      </article>
-    </div>
-
-   
-    <div class="clear"></div>
-  </main>
-</div>
-
-  <section class="hoc container clear"> 
-  
-    
-    
-   
-    <div class="clear"></div>
   </section>
 </div>
 
 
 
 
-  <footer id="footer" class="hoc clear"> 
+
+
+  <footer id="footer" class="hoc clear" style="height: 80%;"> 
  
-    <div class="one_third first">
+    <div class="one_third first" style="float: left;">
       <h6 class="heading">TMS</h6>
       <p>About tour managemet system</p>
      
     </div>
-    <div class="one_third">
+    <div class="one_third" style="float: left;">
       <h6 class="heading">Address</h6>
       <ul class="nospace btmspace-30 linklist contact">
         <li><i class="fa fa-map-marker"></i>
@@ -197,7 +161,8 @@
 
       </ul>
     </div>
-    <div class="one_third">
+
+    <div class="one_third" style="float: left;">
       <h6 class="heading">News</h6>
       <article><a href="#"><img class="btmspace-15" src="../images/demo/320x140.png" alt=""></a>
         <h6 class="nospace font-x1"><a href="#">Headline</a></h6>

@@ -132,48 +132,10 @@
         </article>
       </li>
     </ul>
-   
-    <div class="clear"></div>
   </section>
 </div>
 
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
 
-    
-        <footer>
-          
-          </ul>
-        </footer>
-      </article>
-      <article class="one_third">
-        
-        <footer>
-          
-          </ul>
-        </footer>
-      </article>
-      <article class="one_third">
-        
-        <footer>
-          
-        </footer>
-      </article>
-    </div>
-
-   
-    <div class="clear"></div>
-  </main>
-</div>
-
-  <section class="hoc container clear"> 
-  
-    
-    
-   
-    <div class="clear"></div>
-  </section>
-</div>
 
 
   <footer id="footer" class="hoc clear"> 

@@ -3,18 +3,12 @@
 <html lang="">
 <head>
 <title>Packages</title>
-<style>
-.bhaktapur{
-  height: "300";
-  width:"300";
-  color:"Black";
-}
-</style>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
-<body id="top">
+<body id="top" style="background-color: white;">
 
 <div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');"> 
  
@@ -74,21 +68,24 @@
       <div id="gallery">
         <figure>
           <header class="heading">Select Package</header>
-          <ul class="nospace clear">
 
             
               @foreach($programs as $row)
               <form action="{!! url('tms/demoBooking',$row->id) !!}">
-                
+                <div style="float: left; width: 30%;">
 
-              <li class="one_quarter"><img src="/{{$row->image}}" alt="">
+              <img style="width:80%; height: 150px;" src="/{{$row->image}}" alt="">
+              <div>
+              <b class="align-center">{{$row->program_name}}</b>
+            </div>
                 <button type="submit" >View info</button>
-            </li>
-          </form>
+
+                <br><br>
+              </div>
+            </form>
 
 
             @endforeach
-          </ul>
           
         </figure>
       </div>
@@ -139,9 +136,10 @@
           </tbody>
         </table>
       </div>
-      
+      </div>
+      <br><br>
 
-  <footer id="footer" class="hoc clear"> 
+  <footer id="footer" class="hoc clear" style="padding: 45px;background-color: #191919;max-width: 100%;margin: 0px;"> 
 
     <div class="one_third first">
       <h6 class="heading">TMS</h6>
@@ -178,7 +176,7 @@
     </div>
     
   </footer>
-</div>
+
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
