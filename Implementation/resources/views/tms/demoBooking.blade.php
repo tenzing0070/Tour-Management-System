@@ -44,6 +44,7 @@ User:{{ Auth::user()->name}} <br><br>
 <form method="POST" action="{!!url('/tms/demoBooking',$program->id)!!}">
              
 @csrf
+
     <label class="inputLabel">Package Name</label>
     <input type="text" name="PackageName" value="{{$program->program_name}}" class="btn btn-danger" disabled> 
     <label class="inputLabel">Details</label>
@@ -52,6 +53,7 @@ User:{{ Auth::user()->name}} <br><br>
     <input type="text" name="cost" value="{{$program->price}}" class="btn btn-danger" disabled>
     <label class="inputLabel">Hotel</label>
     <input type="text" name="hotel" value="{{$program->hotel}}" class="btn btn-danger" disabled>
+    <img style="width:80%; height: 150px;" src="/{{$program->image}}" alt="">
 
 
 

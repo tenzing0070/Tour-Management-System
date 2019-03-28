@@ -36,9 +36,10 @@
 		<th>Address</th>
 		<th>Phone</th>
 		<th>Nationality</th>
+		<th>UserTypeId</th>
 		<th>Email</th>
 		<th>Password</th>
-		<th>UserTypeId</th>
+		
 
 
 	</tr>
@@ -50,9 +51,10 @@
 <td>{{ $row->address }}</td>
 <td>{{ $row->phone }}</td>
 <td>{{ $row->nationality }}</td>
+<td>{{ $row->userTypeId }}</td>
 <td>{{ $row->email }}</td>
 <td>{{ $row->password }}</td>
-<td>{{ $row->userTypeId }}</td>
+
 </tr>
 @endforeach
 

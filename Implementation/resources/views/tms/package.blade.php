@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="">
@@ -52,8 +54,8 @@
        <div class="input-group">
 
          <input type="text" class="form-control" name="search"
-          placeholder="Search package"> 
-          <button type="submit" class="btn btn-primary">
+          placeholder="Search by Name"> 
+          <input type="submit" name="submit" value="Search" class="btn btn-danger" style="color:black;">
           </button>
         
         </div>
@@ -64,37 +66,59 @@
   <main class="hoc container clear"> 
    
     <div class="content"> 
-     
-      <div id="gallery">
+     <div id="gallery">
         <figure>
           <header class="heading">Select Package</header>
 
-            
-              @foreach($programs as $row)
-              <form action="{!! url('tms/demoBooking',$row->id) !!}">
+     <div class="container">
+      @if(isset($details))
+      
+   
+    
+     
+        @foreach($details as $user)
+         <form action="{!! url('tms/demoBooking',$user->id) !!}">
                 <div style="float: left; width: 30%;">
 
-              <img style="width:80%; height: 150px;" src="/{{$row->image}}" alt="">
+              
               <div>
-              <b class="align-center">{{$row->program_name}}</b>
+                 <img style="width:80%; height: 150px;" src="/{{$user->image}}" alt="">
+                <label class="inputLabel">Package Name</label>
+              <b class="align-center">{{$user->program_name}}</b> <br><br>
+              <label class="inputLabel">About the destination</label>
+              <b class="align-center">{{$user->detail}}</b> <br><br>
+              <label class="inputLabel">Price/Person</label>
+              <b class="align-center">{{$user->price}}</b><br><br>
+              <label class="inputLabel">Place of Stay</label>
+              <b class="align-center">{{$user->hotel}}</b><br><br><br>
+             
+
             </div>
-                <button type="submit" >View info</button>
+                <input type="submit" name="submit" value="Book" class="btn btn-danger" style="color:black;">
 
                 <br><br>
               </div>
             </form>
 
-
-            @endforeach
           
-        </figure>
-      </div>
+          @endforeach
+     
+
+@elseif(isset($message))
+<p>{{$message}}</p>
+@endif
+</div>
+
+
       
     </div>
   
+  
     <div class="clear"></div>
+
   </main>
-    
+ 
+
      
 
 	 <h1>Package Details</h1>
@@ -185,3 +209,4 @@
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
 </body>
 </html>
+

@@ -117,14 +117,17 @@ Route::get('tms/dataDisplay','DataController@index');
 
 Route::get('tms/admin/dashboard','TmsController@dashboard');
 
-//serrching
-// Route::any('tms/package',function(){
-// 	$search= Input::get ('search');
-// 	$program=Program::where('program_name','LIKE','%' .$search. '%')->get();
+//searching package
+Route::any('tms/package',function(){
+	$search= Input::get ('search');
+	$program=Program::where('program_name','LIKE','%' .$search. '%')->get();
 
-// 	if(count($program)>0)
-// 		return view('tms/package')->withDetails($program)->withQuery ($search);
-// 	else return view ('tms/package')->withMessage('No data found');
+	if(count($program)>0)
+		return view('tms/package')->withDetails($program)->withQuery ($search);
+	else return view ('tms/package')->withMessage('No data found');
+});
+		
+
 
 
 
