@@ -87,7 +87,7 @@
               <b class="align-center">{{$user->program_name}}</b> <br><br>
               <label class="inputLabel">About the destination</label>
               <b class="align-center">{{$user->detail}}</b> <br><br>
-              <label class="inputLabel">Price/Person</label>
+              <label class="inputLabel">Price/Person (Rs)</label>
               <b class="align-center">{{$user->price}}</b><br><br>
               <label class="inputLabel">Place of Stay</label>
               <b class="align-center">{{$user->hotel}}</b><br><br><br>

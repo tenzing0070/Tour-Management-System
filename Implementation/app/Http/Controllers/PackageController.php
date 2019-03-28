@@ -42,7 +42,7 @@ class PackageController extends Controller
     $demo->to_date=$request->to_date;
     $demo->nop=$request->nop;
     $demo->save();
-    return redirect()->to('tms/package')->with('Success, Data Added');
+    return redirect()->to('tms/receipt')->with('Success, Data Added');
     }
 
     /**

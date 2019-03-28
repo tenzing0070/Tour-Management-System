@@ -67,10 +67,14 @@
           <div class="container">
             
               <a class="btn btn-md btn-primary-outline active display-7" style="border-radius: 45px;" href="{!! url('tms/dataDisplay') !!}">View Information</a>
+               &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;"  href="{!! url('tms/packageData') !!}">Package</a>
+              &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="{!! url('tms/pictureAdmin') !!}">Image</a>
-            
-              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="{!! url('tms/print/users') !!}">Users</a>
+              <br><br><br><br>
+              <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="{!! url('tms/print/users') !!}">Registered Users</a>
+               &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+               <a class="btn btn-md btn-primary-outline display-7" style="border-radius: 45px;" href="">Billing Information</a>
             
 
       </div>

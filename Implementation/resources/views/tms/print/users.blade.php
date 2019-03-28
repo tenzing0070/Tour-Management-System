@@ -12,7 +12,7 @@
 <div class="panel-heading">
 	<form> 
 		
-         <input type="button" value="Print" onclick="window.print()" /> 
+         <input type="button" value="Print" class="btn btn-danger"onclick="window.print()" /> 
   
       </form>
       <br/>

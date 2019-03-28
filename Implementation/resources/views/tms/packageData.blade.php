@@ -27,7 +27,7 @@
 					<th>Package Name</th>
 					<th>Package Details</th>
 					<th>Package Image</th>
-					<th>Package Price/Person</th>
+					<th>Package Price/Person (Rs)</th>
 					<th>Hotel/Stay</th>
 					<th>Edit</th>
 					<th>Delete</th>

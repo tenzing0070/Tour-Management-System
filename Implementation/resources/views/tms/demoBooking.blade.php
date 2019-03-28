@@ -49,7 +49,7 @@ User:{{ Auth::user()->name}} <br><br>
     <input type="text" name="PackageName" value="{{$program->program_name}}" class="btn btn-danger" disabled> 
     <label class="inputLabel">Details</label>
     <input type="text" name="detail" value="{{$program->detail}}" class="btn btn-danger" disabled>
-    <label class="inputLabel">Cost</label>
+    <label class="inputLabel">Cost (Rs)</label>
     <input type="text" name="cost" value="{{$program->price}}" class="btn btn-danger" disabled>
     <label class="inputLabel">Hotel</label>
     <input type="text" name="hotel" value="{{$program->hotel}}" class="btn btn-danger" disabled>
@@ -73,7 +73,7 @@ User:{{ Auth::user()->name}} <br><br>
 
                   <input type="hidden" name="userid" value="{{Auth::user()->id}}" class="btn btn-danger">
  
-                <input type="submit" name="book" value="Book" class="btn btn-danger">
+              <a href="{!! url('tms/receipt') !!}" >  <input type="submit" name="book" value="Book" class="btn btn-danger">
 
                  <a href="{!! url('tms/package') !!}" > <input type="submit" name="book" value="Cancel" class="btn btn-danger"> {{ __('Cancel') }}</a>
 

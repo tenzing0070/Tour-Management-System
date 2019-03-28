@@ -103,6 +103,9 @@ Route::delete('tms/pictureAdmin/{id}','PictureController@destroy');
 
 //admin user booked information display
 Route::get('tms/dataDisplay','DataController@index');
+
+//bill display
+Route::get('tms/receipt','BillController@index');
 //print preview
 
 //booked information pdf print
