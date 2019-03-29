@@ -14,9 +14,8 @@
 		</div>
 		@endif
 
-<table class="table table-bordered">
+		<table class="table table-bordered">
 				<tr>
-					<th>Booking ID</th>
 					<th>User Id</th>
 					<th>Package Id</th>
 					<th>Booking Date</th>
@@ -24,29 +23,35 @@
 					<th>Package Ends</th>
 					<th>Number of People</th>
 					<th>Package Name</th>
-					<th>Package Details</th>
-					<th>Package Cost</th>
+					<th>Price</th>
 					<th>Hotel</th>
-					<th>vat</th>
-					<th>Total Cost</th>	
-					
+					<th>Total Amount</th>
 				</tr>
-				@foreach($demos as $row)
+		@foreach($demos as $row)
 
 				<tr>
-					<td>{{$row->id}}</td>
 					<td>{{$row->userId}}</td>
 					<td>{{$row->PackId}}</td>
 					<td>{{$row->bookdate}}</td>
 					<td>{{$row->from_date}}</td>
 					<td>{{$row->to_date}}</td>
-					<td>{{$row->nop}}</td>
-					
+					<td id="n">{{$row->nop}}</td>
+					<td>{{$row->program_name}}</td>
+					<td id="p">{{$row->price}}</td>
+					<td>{{$row->hotel}}</td>
+					<td id="tot"></td>
+
 				</tr>
 
 				@endforeach	
 		</table>
-	</div>
+		<script type="text/javascript">
+			var p=document.getElementById("p").textContent;
+			var n=document.getElementById("n").textContent;
+			var cal=p*n;
+			document.getElementById("tot").textContent=cal;
+		</script>
+
 </div>
 
 	</div>

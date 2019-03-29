@@ -14,8 +14,12 @@ class BillController extends Controller
      */
     public function index()
     {
-        $demos = DB::table('demos')->get()->toArray();
-      return view('tms.receipt', compact('demos'));
+        $id=DB::table('demos')->get()->last()->id;
+         $demos = DB::table('demos')
+          ->join('programs','programs.id','=','demos.PackId')
+         ->where('demos.id',$id)
+         ->get()->toArray();
+      return view('tms.receipt', compact('demos')); 
     }
 
     /**
@@ -36,7 +40,18 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        
+    //      $demo=new Demo();
+    
+    // $demo->program_name=$request->program_name;
+    // $demo->price=$request->price;
+    // $demo->hotel=$request->hotel;
+    // $demo->bookdate=$request->bookdate;
+    // $demo->from_date=$request->from_date;
+    // $demo->to_date=$request->to_date;
+    // $demo->nop=$request->nop;
+    // $demo->totAmt=$request->price;
+    // $demo->save();
+    // return redirect()->to('tms/receipt')->with('Success, Data Added');
     }
 
     /**

@@ -32,6 +32,9 @@
 					<th>Package Ends</th>
 					<th>Number of People</th>
 					
+
+					
+					
 				</tr>
 		@foreach($demos as $row)
 
