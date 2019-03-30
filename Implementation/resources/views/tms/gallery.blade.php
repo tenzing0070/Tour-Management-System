@@ -8,6 +8,25 @@
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link href="{{ url('assets/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" media="all">
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  
+ 
+  transition: transform .5s;
+ 
+  }
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3); 
+}
+</style>
+
 </head>
 <body id="top">
 
@@ -55,17 +74,18 @@
         
 
               @foreach($picture as $row)
-            
+            <div class="zoom">
                 <div style="float: left; width: 30%;">
 
                  <img class="img-fluid img-thumbnail" style="width:80%; height: 150px;" src="/{{$row->picture}}" alt="">
-                  <div style="float: left; width: 80%;">
+                  <div style="float: cent; width: 80%;">
                     <center>
               <b>{{$row->pname}}</b>
             </center>
             </div>
                  <br><br>
 <br>              </div>
+</div>
             
 
            @endforeach

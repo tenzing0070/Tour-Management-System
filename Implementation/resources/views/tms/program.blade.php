@@ -37,7 +37,7 @@
 				<input type="text" name="hotel" class="form-control" placeholder="Enter Hotel Name" />
 			</div>
 			<div class="form-group">
-					<input type="submit" class="btn tbn-primary" />
+					<input type="submit" class="btn tbn-danger" />
 
 
 			<a href="{!! url('tms/packageData') !!}"button type="submit" class="btn btn-primary"  > 

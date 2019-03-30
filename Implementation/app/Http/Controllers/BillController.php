@@ -40,18 +40,20 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-    //      $demo=new Demo();
+         $demo=new Demo();
     
-    // $demo->program_name=$request->program_name;
-    // $demo->price=$request->price;
-    // $demo->hotel=$request->hotel;
-    // $demo->bookdate=$request->bookdate;
-    // $demo->from_date=$request->from_date;
-    // $demo->to_date=$request->to_date;
-    // $demo->nop=$request->nop;
-    // $demo->totAmt=$request->price;
-    // $demo->save();
-    // return redirect()->to('tms/receipt')->with('Success, Data Added');
+    $demo->PackId=$id;
+     $demo->userId=$request->userid;
+     $demo->bookdate=(Carbon\Carbon::now('Asia/Kathmandu')->toDateTimeString('Y-m-d H:i'));
+    $demo->from_date=$request->from_date;
+    $demo->to_date=$request->to_date;
+    $demo->nop=$request->nop;
+    $demo->program_name=$request->program_name;
+    $demo->price=$request->price;
+    $demo->hotel=$request->hotel;
+    
+    $demo->save();
+    return redirect()->to('tms/receipt')->with('Success, Data Added');
     }
 
     /**

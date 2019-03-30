@@ -14,7 +14,7 @@
 		@endif
 
 		<div align="right">
-			<a href="{{url('/tms/program')}}" class="btn btn-primary">Add</a>
+			<a href="{{url('/tms/program')}}" class="btn btn-danger">Add</a>
 		<div align="left">
 			<a href="{!! url('tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
                                     {{ __('Back') }}</a>
@@ -48,7 +48,7 @@
 
 						@csrf
 						{!! method_field('GET') !!}
-							<button type="submit" class="btn btn-danger">Edit</button> 
+							<button type="submit" class="btn btn-primary">Edit</button> 
 						</form>
 						<!-- <a href="{{url('/tms/packageEdit',$row->id)}}">Edit</a> -->
 					</td>

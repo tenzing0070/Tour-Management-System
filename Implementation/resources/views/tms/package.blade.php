@@ -1,9 +1,49 @@
 
 
+
 <!DOCTYPE html>
 
 <html lang="">
 <head>
+
+  <style>
+ 
+
+  div.a {
+  white-space: nowrap; 
+  width: 200px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  border: 1px solid #000000;
+}
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+</style>
 <title>Packages</title>
 
 <meta charset="utf-8">
@@ -46,7 +86,7 @@
 
 </div>
 
-<div class="wrapper row3">
+<div class="wrapper row3 col-md-12 ">
 
 
 <form action="/tms/package" method="POST" role="search">
@@ -54,21 +94,20 @@
        <div class="input-group">
 
          <input type="text" class="form-control" name="search"
-          placeholder="Search by Name"> 
-          <input type="submit" name="submit" value="Search" class="btn btn-danger" style="color:black;">
+          placeholder="Search by Name" style="width:20%; height:40px;"> 
+          <input type="submit" name="submit" value="Search" class="btn btn-danger" style="color:black; width:20%;">
           </button>
         
         </div>
       </form>
 </div>
-<div class="wrapper row3">
-  
+<div class="wrapper row3 col-md-12">
   <main class="hoc container clear"> 
    
-    <div class="content"> 
-     <div id="gallery">
+    <div class="content col-md-12"> 
+     <div id="gallery" class="col-md-12>
         <figure>
-          <header class="heading">Select Package</header>
+         
 
      <div class="container">
       @if(isset($details))
@@ -77,26 +116,26 @@
     
      
         @foreach($details as $user)
-         <form action="{!! url('tms/demoBooking',$user->id) !!}">
+         <form action="{!! url('tms/demoBooking',$user->id) !!}" >
                 <div style="float: left; width: 30%;">
 
               
               <div>
-                 <img style="width:80%; height: 150px;" src="/{{$user->image}}" alt="">
+                 <img style="width:90%; height: 170px;" src="/{{$user->image}}" alt="">
                 <label class="inputLabel">Package Name</label>
               <b class="align-center">{{$user->program_name}}</b> <br><br>
               <label class="inputLabel">About the destination</label>
-              <b class="align-center">{{$user->detail}}</b> <br><br>
+              <div class="a">{{$user->detail}}</div> <br>
               <label class="inputLabel">Price/Person (Rs)</label>
               <b class="align-center">{{$user->price}}</b><br><br>
               <label class="inputLabel">Place of Stay</label>
-              <b class="align-center">{{$user->hotel}}</b><br><br><br>
+              <b class="align-center">{{$user->hotel}}</b><br>
              
 
             </div>
-                <input type="submit" name="submit" value="Book" class="btn btn-danger" style="color:black;">
+                <input type="submit" name="submit" value="Book Now" class="button button3" style="color:black; width:60%;">
 
-                <br><br>
+                <br><br><br><br>
               </div>
             </form>
 

@@ -10,13 +10,16 @@
 </center>
 <br>
 <div class="panel-heading">
-	<form> 
-		
-         <input type="button" value="Print" class="btn btn-danger"onclick="window.print()" /> 
+	<div class="form-group">
+		<div align="center">
+         <input type="button" value="Print" class="btn btn-danger"onclick="window.print()" /> <br><br>
+
+         <div align="left">
+        <a href="{!! url('tms/admin/dashboard') !!}"button type="submit" class="btn btn-primary"  > 
+                                    {{ __('Back') }}</a>
   
-      </form>
-      <br/>
-      <br/>
+      </div>
+      
  
       <script type="text/javascript">
 			$("button").click(function (){
