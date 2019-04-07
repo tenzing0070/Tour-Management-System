@@ -64,13 +64,16 @@
 		
 		<table class="table table-bordered">
 				<tr>
+					<th>ID</th>
 					<th>Package Name</th>
 					<th>Package Image</th>
 					<th>Delete</th>
+
 				</tr>
 				@foreach($picture as $row)
 
 				<tr>
+					<td>{{$row->id}}</td>
 					<td>{{$row->pname}}</td>
 					
 					<td>

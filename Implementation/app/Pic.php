@@ -8,7 +8,7 @@ class Pic extends Model
 {
     
 	protected $table="picture";
-    protected $fillable=['pname','picture',
+    protected $fillable=['id','pname','picture',
 
 
 ];

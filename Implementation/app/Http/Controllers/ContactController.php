@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Contact;
 use Illuminate\Http\Request;
+use DB;
 
 class ContactController extends Controller
 {
@@ -14,7 +15,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+          $contacts = DB::table('contacts')->get()->toArray();
+      return view('tms.comment', compact('contacts')); 
     }
 
     /**
@@ -24,7 +26,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('tms/contact');
+        return view('tms/comment');
     }
 
     /**

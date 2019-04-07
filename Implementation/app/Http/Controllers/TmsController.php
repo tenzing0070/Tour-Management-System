@@ -67,6 +67,10 @@ class TmsController extends Controller
         return view('tms.admin.dashboard');
      }
     
+     public function popupinfo()
+     {
+        return view('tms.popup.popupinfo');
+     }
 
 
     /**

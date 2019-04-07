@@ -16,7 +16,7 @@ class DataController extends Controller
     public function index()
     {
          $demos = DB::table('demos')->get()->toArray();
-      return view('tms.DataDisplay', compact('demos')); 
+      return view('tms.dataDisplay', compact('demos')); 
     }
 
     function get_booked_data()

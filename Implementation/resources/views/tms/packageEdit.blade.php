@@ -15,6 +15,9 @@
 	{{method_field('put')}}
 	<input type="hidden" name="_method" value="PATCH" />
 	<div class="form-group">
+		<input type="text" name="id" class="form-control" value="{{$data->id}}" placeholder="Package ID" /disabled>
+		</div>
+	<div class="form-group">
 		<input type="text" name="program_name" class="form-control" value="{{$data->program_name}}" placeholder="Enter package name" />
 		</div>
 	<div class="form-group">

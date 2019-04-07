@@ -42,7 +42,7 @@ class LoginController extends Controller
     {
         switch (Auth::user()->userTypeId) {
             case '1':
-                return ('tms/gallery');
+                return ('tms/admin/dashboard');
                 break;
             
             default:

@@ -38,14 +38,20 @@ Route::get('tms/index','TmsController@index');
 Route::get('tms/index1','TmsController@index1');
 Route::get('tms/login','TmsController@login');
 Route::get('tms/registration','TmsController@registration');
+Route::get('tms/popup/popupinfo','TmsController@popupinfo');
 
+//!!contact!!
 //form ko action work
 Route::put('tms/contacts','ContactController@store');
+
 
 Route::get('tms/contact', function(){
 		return view('tms/contact');
 
 });
+
+//admin comments
+Route::get('tms/comment','ContactController@index');
 
 Route::get('tms/package','PackageController@show');
 
@@ -129,6 +135,8 @@ Route::any('tms/package',function(){
 		return view('tms/package')->withDetails($program)->withQuery ($search);
 	else return view ('tms/package')->withMessage('No data found');
 });
+
+
 		
 
 

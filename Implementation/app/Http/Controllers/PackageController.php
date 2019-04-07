@@ -37,12 +37,29 @@ class PackageController extends Controller
 
     $demo->PackId=$id;
      $demo->userId=$request->userid;
-     $demo->bookdate=(Carbon\Carbon::now('Asia/Kathmandu')->toDateTimeString('Y-m-d H:i'));
+     $demo->bookdate=(Carbon\Carbon::now('Asia/Kathmandu')->toDateTimeString('Y-m-d'));
     $demo->from_date=$request->from_date;
     $demo->to_date=$request->to_date;
     $demo->nop=$request->nop;
+
+
+
+//same user and same booking from date action.
+        //     if(Demo::where('userId', '=', $picUrl)->exists()) 
+        // {
+        //     return redirect('/tms/pictureAdmin')->with('itemNameExists','Same image file name found. Please enter again ');
+
+        // }
+        //     else
+        //     {
+        //         //
+        //     $pictureAdmin->pname=$request->pname;
+           
+        //    $pictureAdmin->picture=$picUrl;
+        
+        
     $demo->save();
-    return redirect()->to('tms/receipt')->with('Success, Data Added');
+    return redirect()->to('tms/popup/popupinfo')->with('Success, Data Added');
     }
 
     /**

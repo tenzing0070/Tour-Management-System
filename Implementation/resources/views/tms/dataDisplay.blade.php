@@ -12,6 +12,7 @@
 				<p>{{$message}}</p>
 		</div>
 		@endif
+		
 
 		<div align="center">
 			<a  id="btn-convert" class="btn btn-danger" href="{{url('pdf')}}">Convert to PDF</a><br><br>

@@ -96,10 +96,10 @@
          <input type="text" class="form-control" name="search"
           placeholder="Search by Name" style="width:20%; height:40px;"> 
           <input type="submit" name="submit" value="Search" class="btn btn-danger" style="color:black; width:20%;">
-          </button>
-        
+          
         </div>
       </form>
+
 </div>
 <div class="wrapper row3 col-md-12">
   <main class="hoc container clear"> 
@@ -111,15 +111,9 @@
 
      <div class="container">
       @if(isset($details))
-      
-   
-    
-     
         @foreach($details as $user)
          <form action="{!! url('tms/demoBooking',$user->id) !!}" >
-                <div style="float: left; width: 30%;">
-
-              
+                <div style="float: left; width: 30%;">  
               <div>
                  <img style="width:90%; height: 170px;" src="/{{$user->image}}" alt="">
                 <label class="inputLabel">Package Name</label>
@@ -130,8 +124,7 @@
               <b class="align-center">{{$user->price}}</b><br><br>
               <label class="inputLabel">Place of Stay</label>
               <b class="align-center">{{$user->hotel}}</b><br>
-             
-
+    
             </div>
                 <input type="submit" name="submit" value="Book Now" class="button button3" style="color:black; width:60%;">
 
@@ -160,53 +153,22 @@
 
      
 
-	 <h1>Package Details</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Package</th>
-              <th>Cost</th>
-              <th>Duratioin</th>
-              <th>Stay</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>PIkey Hills</td>
-              <td>3000/person</td>
-              <td>4 days</td>
-              <td>Hotel</td>
-            </tr>
-            <tr>
-              <td>Dudhkunda</td>
-              <td>50000/person</td>
-              <td>7 days</td>
-              <td>Camping</td>
-            </tr>
-            <tr>
-              <td>Namche Bazar</td>
-              <td>40000/person</td>
-              <td>5 days</td>
-              <td>Hotel, Home stay, Camping</td>
-            </tr>
-            <tr>
-              <td>Junbesi</td>
-              <td>35000/person</td>
-              <td>4 days</td>
-              <td>Hotel, Home stay, Camping</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      </div>
-      <br><br>
+	 
 
-  <footer id="footer" class="hoc clear" style="padding: 45px;background-color: #191919;max-width: 100%;margin: 0px;"> 
+  <footer id="footer" class="hoc clear" style="padding: 45px;background-color: lightblue; max-width: 100%;margin: 0px; font-color:white;"> 
 
     <div class="one_third first">
       <h6 class="heading">TMS</h6>
-      <p>About tms</p>
+
+       <p>About tour managemet system</p>
+        <br>
+      <h6 class="heading">MAP</h6>
+      <section class="map1 cid-rmVwU5SlDf" id="map1-k"  >
+
+     
+
+    <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7064.146916369478!2d85.30789372205474!3d27.71501812911808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fcb77fd4bd%3A0x58099b1deffed8d4!2sThamel%2C+Kathmandu+44600!5e0!3m2!1sen!2snp!4v1554611512488!5m2!1sen!2snp" allowfullscreen=""></iframe></div>
+</section>
      
       
     </div>

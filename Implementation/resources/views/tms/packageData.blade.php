@@ -24,6 +24,7 @@
 		
 		<table class="table table-bordered">
 				<tr>
+					<th>Package Id</th>
 					<th>Package Name</th>
 					<th>Package Details</th>
 					<th>Package Image</th>
@@ -35,6 +36,7 @@
 				@foreach($programs as $row)
 
 				<tr>
+					<td>{{$row->id}}</td>
 					<td>{{$row->program_name}}</td>
 					<td>{{$row->detail}}</td>
 					<td>

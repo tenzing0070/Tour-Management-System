@@ -24,7 +24,7 @@
  div.relative1 {
   position: relative;
    left: 550px;
-  top:-500px;
+  top:-750px;
 
 }
   .col-75 {
@@ -92,22 +92,22 @@ User:{{ Auth::user()->name}} <br><br>
 </div>
 <div class="relative1">
 <div class="bnr-right">
-                <label class="inputLabel"><b>From</b></label><br><br>
+                <label class="Check-In"><b>From</b></label><br><br>
                 <input class="date" id="datepicker" type="date" placeholder="dd-mm-yyyy"  name="from_date" required="">
             </div>
 
 <div class="bnr-right">
-                <label class="inputLabel"><b>To</b></label><br><br>
+                <label class="Check-Out"><b>To</b></label><br><br>
                 <input class="date" id="datepicker1" type="date" placeholder="dd-mm-yyyy" name="to_date" required="">
             </div>
   <label class="inputLabel"><b>Number of People</b></label><br><br>
-<input type="number" id="myNumber" name="nop" placeholder="Enter no of people">
+<input type="number" min="1" max="100" value="1" id="myNumber" name="nop" placeholder="Enter no of people" required="">
 
 
 
                   <input type="hidden" name="userid" value="{{Auth::user()->id}}" class="btn btn-danger">
  
-              <a href="{!! url('tms/receipt') !!}" >  <input type="submit" name="book" value="Book" class="btn btn-danger"></a>
+              <a href="{!! url('tms/popup/popupinfo') !!}" >  <input type="submit" name="book" value="Book" class="btn btn-danger"></a>
 
                  <a href="{!! url('tms/package') !!}" > <input type="submit" name="book" value="Cancel" class="btn btn-danger"> 
                                          {{ __('Cancel') }}</a>
