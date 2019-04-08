@@ -9,6 +9,10 @@
 </head>
 <body id="top">
 
+
+
+
+
 <div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png'');"> 
 
   <div class="wrapper row1">
@@ -22,9 +26,6 @@
           <li class="active"><a href="{!! url('tms/index') !!}">Home</a></li>
           
             
-              <!-- <li><a href="{!! url('tms/gallery') !!}">Gallery</a></li> -->
-             <!--  <li><a href="{!! url('tms/package') !!}">Packages</a></li>
-              <li><a href="{!! url('tms/contact') !!}">Contact</a></li> -->
               <li><a href="{{ route('register')}}">Register</a></li>
               <li><a href="{{ route('login')}}">Sign in</a></li>
           
