@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class SystemTest extends TestCase
@@ -73,7 +74,7 @@ public function testContact()
     }
 
 
-public function testsearch()
+public function testSearch()
     {
     	$response = $this->call('GET', '/tms/package');
 
@@ -94,7 +95,7 @@ public function testPictureAdmin()
     	$this->assertEquals(200,$response->status());
     }
 
-public function testpackageData()
+public function testPackageData()
     {
     	$response = $this->call('GET', '/tms/packageData');
 
@@ -104,7 +105,7 @@ public function testpackageData()
 
   public function testEditProfile()
     {
-    	$response = $this->call("GET",'/tms/editProfile',[
+    	$response = $this->call("POST",'/tms/editProfile',[
     		'name' => "john",
     		'address' => "newyork",
     		'phone' => "999999999",
@@ -114,7 +115,22 @@ public function testpackageData()
     		
 	    ]);
 
-	    $this->assertEquals(200,$response->status());
+	    $this->assertEquals(302,$response->status());
     }
+
+    use WithoutMiddleware;
+
+
+public function testDelete()
+{
+    $response= $this->call("DELETE",'/tms/packageEdit/15',[
+
+            'id'=>"15"
+
+        ]);
+    $this->assertEquals(302,$response->status());
+}
+
+
 
 }

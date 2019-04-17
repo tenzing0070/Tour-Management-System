@@ -14,21 +14,15 @@ class CreateDemosTable extends Migration
     public function up()
     {
         Schema::create('demos', function (Blueprint $table) {
-             $table->increments('id');
-            
-
-  
+             $table->increments('id');  
             $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references ('id')->on ('users');
-            
+            $table->foreign('userId')->references ('id')->on ('users');           
             $table->dateTime('bookdate');
             $table->dateTime('from_date');
             $table->dateTime('to_date');
             $table->string('nop',100);
-
             $table->integer('PackId')->unsigned();
-            $table->foreign('PackId')->references ('id')->on ('programs');
-            
+            $table->foreign('PackId')->references ('id')->on ('programs');    
             $table->rememberToken();
             $table->timestamps();
         });

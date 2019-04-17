@@ -1,7 +1,5 @@
 @extends('master')
-
 @section('content')
-
 <div class="row">
 	<div class="col-md-12">
 		<br />
@@ -12,7 +10,6 @@
 				<p>{{$message}}</p>
 		</div>
 		@endif
-
 		<div align="right">
 			<a href="{{url('/tms/program')}}" class="btn btn-danger">Add</a>
 		<div align="left">
@@ -20,8 +17,6 @@
                                     {{ __('Back') }}</a>
 			<br />
 			<br />
-
-		
 		<table class="table table-bordered">
 				<tr>
 					<th>Package Id</th>
@@ -34,7 +29,6 @@
 					<th>Delete</th>
 				</tr>
 				@foreach($programs as $row)
-
 				<tr>
 					<td>{{$row->id}}</td>
 					<td>{{$row->program_name}}</td>
@@ -46,8 +40,6 @@
 					<td>{{$row->hotel}}</td>
 					<td>
 						<form method="post" class="" action="{{url('/tms/packageEdit',$row->id)}}">
-
-
 						@csrf
 						{!! method_field('GET') !!}
 							<button type="submit" class="btn btn-primary">Edit</button> 
@@ -56,20 +48,15 @@
 					</td>
 					<td>
 						<form method="post" class="delete_form" action="{{url('/tms/packageEdit',$row->id)}}">
-
-
 						@csrf
 						{!! method_field('DELETE') !!}
 							<button type="submit" class="btn btn-danger">Delete</button> 
 						</form>
 						<!-- <a href="{{url('/tms/packageEdit',$row->id)}}">Delete</a> -->
-
 					</td>
 					<input type="hidden" name="_method" value="DELETE" />
 					
-				
-					
-							
+								
 				</tr>
 
 				@endforeach	
@@ -77,25 +64,5 @@
 	</div>
 </div>
 </div>
-
-
 </div>
 
-<!-- script>
-	$(document).ready(function(){
-
-
-		$('.delete_form').on('submit',function(){
-				if(confirm("Are you sure you want to delete it?"))
-				{
-					return true;
-				}
-		});
-		else
-		{
-			return false;
-		}
-	});
-)};
-</script>
-@endsection

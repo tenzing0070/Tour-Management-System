@@ -18,15 +18,9 @@
   <link rel="stylesheet" href="{{ url('assets/theme/css/style.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ url('assets/gallery/style.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ url('assets/mobirise/css/mbr-additional.css') }}" type="text/css">
-  
-  
-  
 </head>
 <body>
   <section class="menu cid-rkuQtsYRaS" once="menu" id="menu1-9">
-
-    
-
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="hamburger">
@@ -84,8 +78,6 @@
     </div>
 </div>
 </section>
-
-
   <script src="{{ url('assets/web/assets/jquery/jquery.min.js') }}"></script>
   <script src="{{ url('assets/popper/popper.min.js') }}"></script>
   <script src="{{ url('assets/tether/tether.min.js') }}"></script>

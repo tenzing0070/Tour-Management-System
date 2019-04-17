@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="">
 <head>
 <title>Contact</title>
@@ -8,49 +7,32 @@
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-
 <div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');"> 
-
   <div class="wrapper row1">
-    <header id="header" class="hoc clear"> 
-     
+    <header id="header" class="hoc clear">      
       <div id="logo" class="fl_left">
         <h1><a href="{!! url('tms/index1') !!}">Tour Management System</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li><a href="{!! url('tms/index1') !!}">Home</a></li>
-         
+          <li><a href="{!! url('tms/index1') !!}">Home</a></li>         
               <li><a href="{!! url('tms/gallery') !!}">Gallery</a></li>
               <li><a href="{!! url('tms/package') !!}">Packages</a></li>
-              <li class="active"><a href="{!! url('tms/contact') !!}">Contact</a></li>
-             
+              <li class="active"><a href="{!! url('tms/contact') !!}">Contact</a></li>             
             </ul>
-          </li>
-         
+          </li>        
         </ul>
-      </nav>
-      
+      </nav>     
     </header>
-  </div>
-  
+  </div>  
   <section id="breadcrumb" class="hoc clear"> 
-
-    <h6 class="heading">Help to grow us more</h6>
-   
+    <h6 class="heading">Help to grow us more</h6>  
   </section>
-
 </div>
-
 <div class="wrapper row3">
-  <main class="hoc container clear"> 
-    
-    
-    <div class="content three_quarter"> 
-     
+  <main class="hoc container clear">    
+    <div class="content three_quarter">     
       <h1 <h2>Write A Comment</h2>
-       
-
         <form method="post" action=" {{url('tms/contacts')}}">
         @csrf
         {{method_field('put')}}
@@ -69,38 +51,23 @@
           <div class="block clear">
             <label for="comment">Your Comment</label>
             <textarea name="comment" class="form-control" cols="25" rows="10"></textarea>
-          </div>
-          
+          </div>          
             <input type="submit" name="submit" value="Submit Form" class="btn btn-danger" style="color:black;">
-
-            &nbsp;
-          
+            &nbsp;         
         </form>
       </div>
-
-   
-       
-
- 
     <div class="clear"></div>
   </main>
 </div>
-
   <footer id="footer" class="hoc clear"> 
-
     <div class="one_third first">
      <h6 class="heading">TMS</h6>
       <p>About tour managemet system</p>
        <br>
       <h6 class="heading">MAP</h6>
       <section class="map1 cid-rmVwU5SlDf" id="map1-k"  >
-
-     
-
     <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7064.146916369478!2d85.30789372205474!3d27.71501812911808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fcb77fd4bd%3A0x58099b1deffed8d4!2sThamel%2C+Kathmandu+44600!5e0!3m2!1sen!2snp!4v1554611512488!5m2!1sen!2snp" allowfullscreen=""></iframe></div>
-</section>
-     
-     
+</section>     
     </div>
     <div class="one_third">
       <h6 class="heading">Address</h6>
@@ -117,8 +84,6 @@
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
         <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        
-
       </ul>
     </div>
     <div class="one_third">
@@ -129,12 +94,8 @@
         <p class="nospace">Todays headline</p>
       </article>
     </div>
-
   </footer>
 </div>
-
-
-
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="../layout/scripts/jquery.min.js"></script>

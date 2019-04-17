@@ -5,10 +5,8 @@
 		<title>Custom Popup Message With jQuery</title>
 		<link rel="stylesheet href="css/style.css">
 	</head>
-
 	<style>
 	body{
-
 		padding: 0;
 		margin: 0 auto;
 	}
@@ -73,7 +71,6 @@
 		color: #fff;
 		text-align: center;
 		padding:15px 0px;
-
 	}
 </style>
 	<body>

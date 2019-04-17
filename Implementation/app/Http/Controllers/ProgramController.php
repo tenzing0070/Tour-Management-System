@@ -134,11 +134,6 @@ class ProgramController extends Controller
         $picName = $pictureInfo->getClientOriginalName();
 
         $folder = "uploads/gallery/";
-
-
-
-
-
         $picUrl = $folder.$picName;
 
         if ($picUrl->exists())

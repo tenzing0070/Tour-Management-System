@@ -1,14 +1,10 @@
 @extends('master')
-
 @section('content')
-
 <div class="row">
 		<div class="col-md-12">
 			<br />
 			<h3>Edit Record</h3>
 			<br />
-			
-
 @foreach($program as $data)
 			<form method="post" action="{{ url('tms/packageUpdate', $data->id) }}">
 @csrf

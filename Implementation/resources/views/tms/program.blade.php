@@ -24,10 +24,8 @@
 			<p>{{\Session::get('itemNameExists')}}</p>
 		</div>
 		@endif
-
 		<form method="post" action="{{url('/tms/program')}}" enctype="multipart/form-data">
 @csrf
-
 			<div class="form-group">
 				<input type="text" name="program_name" class="form-control" placeholder="Enter Program Name" />
 				<input type="text" name="detail" class="form-control" cols="30" rows="5" placeholder="Enter package detail" />

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="">
 <head>
 <title>Tour Management System</title>
@@ -8,61 +7,39 @@
 <link href="{{ url('layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-
-
-
-
-
-<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png'');"> 
-
+<div class="bgded overlay" style="background-image:url('{{ url('../images/demo/backgrounds/01.png') }}');"> 
   <div class="wrapper row1">
-    <header id="header" class="hoc clear"> 
-     
+    <header id="header" class="hoc clear">     
       <div id="logo" class="fl_left">
         <h1><a href="{!! url('tms/index') !!}">Tour Management System</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
           <li class="active"><a href="{!! url('tms/index') !!}">Home</a></li>
-          
-            
+                      
               <li><a href="{{ route('register')}}">Register</a></li>
-              <li><a href="{{ route('login')}}">Sign in</a></li>
-          
+              <li><a href="{{ route('login')}}">Sign in</a></li>          
             </ul>
-          </li>
-         
-     
+          </li>    
         </ul>
       </nav>
-
     </header>
-  </div>
- 
+  </div> 
   <section id="pageintro" class="hoc clear">
     <div> 
-   
-      <h2 class="heading">Welcome to Nepal</h2>
-     
-     
-     
+     <h2 class="heading">Welcome to Nepal</h2>    
     </div>
-  </section>
-  
+  </section>  
 </div>
-
 <div class="wrapper row2">
-  <section class="hoc container clear"> 
-    
+  <section class="hoc container clear">    
     <div class="sectiontitle">
-      <h6 class="heading">Blessed With Nature</h6>
-      
+      <h6 class="heading">Blessed With Nature</h6>      
     </div>
     <ul class="nospace group services">
       <li class="one_quarter first">
         <article><a href="#"><i class="fa fa-3x fa-500px"></i></a>
-          <h6 class="heading font-x1"><a href="#">Heaven(Not a myth)</a></h6>
-          
+          <h6 class="heading font-x1"><a href="#">Heaven(Not a myth)</a></h6>          
         </article>
       </li>
       <li class="one_quarter">

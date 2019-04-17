@@ -8,8 +8,6 @@ use Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
-
-
 class TmsController extends Controller
 {
     /**
@@ -29,18 +27,12 @@ class TmsController extends Controller
     {
         return view('tms.login');
     }
-     
-    //  public function registration()
-    // {
-    //     return view('tms.registration');
-    // }
+
      public function gallery()
     {
         return view('tms.gallery');
     }
     
-  
-  
     public function register()
     {
         return view('tms.register');

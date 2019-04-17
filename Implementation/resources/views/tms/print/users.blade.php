@@ -1,8 +1,4 @@
 @extends('master')
-
-
-
-
 <div class="row">
 	<div class="col-md-12">
 		<br />
@@ -19,7 +15,6 @@
     	display: none;
   }
 }
-
 </style>
 
 		<div align="center">
@@ -28,10 +23,7 @@
          <div align="left">
         <a href="{!! url('tms/admin/dashboard') !!}"button id="printPageButton" class="btn btn-primary"  > 
                                     {{ __('Back') }}</a>
-  
 	<br><br><br>
-
-
 	<table class="table table-bordered ">
 
 <tr>
@@ -44,9 +36,6 @@
 		<th>UserTypeId</th>
 		<th>Email</th>
 		<th>Password</th>
-		
-
-
 	</tr>
 @foreach($users as $row)
 <tr>
@@ -59,16 +48,12 @@
 	<td>{{ $row->userTypeId }}</td>
 	<td>{{ $row->email }}</td>
 	<td>{{ $row->password }}</td>
-
 </tr>
 @endforeach
-
 </table>
-
       <script type="text/javascript">
 			$("button").click(function (){
 			window.print()
-
 			});
 		</script>
 </div>
