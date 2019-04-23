@@ -9,14 +9,14 @@
  <style>
     div.relative {
   position: relative;
-  left: 850px;
+  left: 750px;
   top:-550px;
   border: auto solid black;
 }
  div.relative1 {
   position: relative;
    left: 550px;
-  top:-750px;
+  top:-550px;
 }
   .col-75 {
   float: left;
@@ -60,7 +60,8 @@ User:{{ Auth::user()->name}} <br><br>
     <input type="text" name="PackageName" value="{{$program->program_name}}" class="btn btn-danger" disabled> 
      <div class="col-75">
     <label class="inputLabel"><b>Details</b></label><br><br>
-    <input type1="text" name="detail" value="{{$program->detail}}" class="btn btn-danger" style="height:200px" disabled>
+    <textarea type1="text" name="detail" value="" class="btn btn-danger" style="height:200px" disabled >{{$program->detail}}
+    </textarea>
 </div>
     <label class="inputLabel"><b>Cost (Rs)</b></label><br><br>
     <input type="text" name="cost" value="{{$program->price}}" class="btn btn-danger" disabled>
@@ -70,17 +71,10 @@ User:{{ Auth::user()->name}} <br><br>
     <img style="width:200%; height: 300px;" src="/{{$program->image}}" alt="">
 </div>
 <div class="relative1">
-
 <div class="bnr-right">
                 <label class="Check-In"><b>From</b></label><br><br>
                 <input class="date" id="datepickerFrom" min=""type="date" placeholder="dd-mm-yyyy"  name="from_date" value="<?php echo date('Y-m-d'); ?>" required="">
             </div>
-
-<div class="bnr-right">
-                <label class="Check-Out"><b>To</b></label><br><br>
-                <input class="date" id="datepickerTo" type="date" placeholder="dd-mm-yyyy" name="to_date" required="">
-            </div>
-
             <script src="{{asset('js/app.js')}}"></script>
             <script type="text/javascript">
               $(document).ready(function(){
@@ -89,15 +83,10 @@ User:{{ Auth::user()->name}} <br><br>
                      var month = '' + (today.getMonth() + 1);
                     var  day = '' + today.getDate();
                     var  year = today.getFullYear();
-
                   if (month.length < 2) month = '0' + month;
                   if (day.length < 2) day = '0' + day;
-
-
                     var inputDate = $("#datepickerFrom").val();
-
                     var date = year+'-'+month+'-'+day;
-
                     if(inputDate < date)
                     {
                       alert('Date is not valid');
@@ -107,42 +96,16 @@ User:{{ Auth::user()->name}} <br><br>
                     else{
                       $('#datepickerFrom').val(inputDate);
                     }
-                });
-
-                  $("#datepickerTo").change(function(){
-                    var today = new Date();
-                     var month = '' + (today.getMonth() + 1);
-                    var  day = '' + today.getDate();
-                    var  year = today.getFullYear();
-
-                  if (month.length < 2) month = '0' + month;
-                  if (day.length < 2) day = '0' + day;
-
-
-                    var inputDate = $("#datepickerTo").val();
-
-                    var date = year+'-'+month+'-'+day;
-
-                    if(inputDate < date)
-                    {
-                      alert('Date is not valid');
-                      $('#datepickerTo').val(year+'-'+month+'-'+day);
-                    }
-
-                    else{
-                      $('#datepickerTo').val(inputDate);
-                    }
-                });
+                });            
               });
               
             </script>
-
   <label class="inputLabel"><b>Number of People</b></label><br><br>
 <input type="number" min="1" max="100" value="1" id="myNumber" name="nop" placeholder="Enter no of people" required="">
                   <input type="hidden" name="userid" value="{{Auth::user()->id}}" class="btn btn-danger">
               <a href="{!! url('tms/popup/popupinfo') !!}" >  <input type="submit" name="book" value="Book" class="btn btn-danger"></a>
              <a href="{!! url('tms/package') !!}" > <input type="submit" name="book" value="Cancel" class="btn btn-danger"> 
-                                         {{ __('Cancel') }}</a>      
+                               {{ __('Cancel') }}         </a>      
           </div>       
             </form>         
         @endforeach  

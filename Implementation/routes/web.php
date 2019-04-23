@@ -30,6 +30,7 @@ Route::get('tms/login','TmsController@login');
 Route::get('tms/registration','TmsController@registration');
 Route::get('tms/popup/popupinfo','TmsController@popupinfo');
 
+
 //!!contact!!
 //form ko action work
 Route::put('tms/contacts','ContactController@store');

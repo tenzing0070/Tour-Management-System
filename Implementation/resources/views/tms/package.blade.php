@@ -39,6 +39,8 @@
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top" style="background-color: white;">
+
+
 <div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');"> 
   <div class="wrapper row1">
     <header id="header" class="hoc clear"> 
@@ -51,9 +53,15 @@
           <li><a href="{!! url('tms/index1') !!}">Home</a></li>         
               <li><a href="{!! url('tms/gallery') !!}">Gallery</a></li>
               <li class="active"><a href="{!! url('tms/package') !!}">Packages</a></li>
-              <li><a href="{!! url('tms/contact') !!}">Contact</a></li>          
-          </li>          
-        </ul>
+              <li><a href="{!! url('tms/contact') !!}">Contact</a></li>   
+               &nbsp &nbsp &nbsp &nbsp    
+               <li class="">
+                <a title="Help" class="fa fa-info-circle" href="" data-target="#modalHelp" data-toggle="modal"> HELP
+                  <span class="mbri-info mbr-iconfont mbr-iconfont-btn"></span>
+                </a>
+              </li>         
+            </ul>
+         
       </nav>   
     </header>
   </div>
@@ -145,6 +153,7 @@
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+
 </body>
 </html>
 

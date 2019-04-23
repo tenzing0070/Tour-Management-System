@@ -5,9 +5,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="{{ url('layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="{{ url('css/app.css') }}" type="text/css">
 </head>
 <body id="top">
-<div class="bgded overlay" style="background-image:url('{{ url('../images/demo/backgrounds/01.png') }}');"> 
+
+<div class="modal fade col-md-12" id="modalHelp">
+  <div class="modal-dialog modal-dialog-center modal-lg col-md-10">
+    <div class="modal-content">
+      <div class="modal-header">
+         &nbsp &nbsp
+        <h2 class="text-center" id="">TMS</h2>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" style="height: 700px;">
+        <embed src="{{ url('userManual.pdf') }}" type="application/pdf" width="100%" height="100%" />
+        
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="bgded overlay" style="background-image:url('{{ url('../images/demo/backgrounds/01.png') }}');">
   <div class="wrapper row1">
     <header id="header" class="hoc clear">     
       <div id="logo" class="fl_left">
@@ -18,10 +36,13 @@
           <li class="active"><a href="{!! url('tms/index') !!}">Home</a></li>
                       
               <li><a href="{{ route('register')}}">Register</a></li>
-              <li><a href="{{ route('login')}}">Sign in</a></li>          
+              <li><a href="{{ route('login')}}">Sign in</a></li> 
+              <li class="">
+                <a title="Help" class="fa fa-info-circle" href="" data-target="#modalHelp" data-toggle="modal"> HELP
+                  <span class="mbri-info mbr-iconfont mbr-iconfont-btn"></span>
+                </a>
+              </li>         
             </ul>
-          </li>    
-        </ul>
       </nav>
     </header>
   </div> 
@@ -31,6 +52,7 @@
     </div>
   </section>  
 </div>
+
 <div class="wrapper row2">
   <section class="hoc container clear">    
     <div class="sectiontitle">
@@ -61,60 +83,10 @@
         </article>
       </li>
     </ul>
-
-  
-
-
-    <!--- routes ---->
-<div class="wrapper row2">
-  <section class="hoc container clear"> 
-  <div class="sectiontitle">
-    <div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
-      <div class="rou-left">
-        <a href="#"><i class="glyphicon glyphicon-list-alt"></i></a>
-      </div>
-      <div class="rou-rgt wow fadeInDown animated" data-wow-delay=".5s">
-        <h3>80000</h3>
-        <p>Enquiries</p>
-      </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="col-md-4 routes-left">
-      <div class="rou-left">
-        <a href="#"><i class="fa fa-user"></i></a>
-      </div>
-      <div class="rou-rgt">
-        <h3>1900</h3>
-        <p>Regestered users</p>
-      </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
-      <div class="rou-left">
-        <a href="#"><i class="fa fa-ticket"></i></a>
-      </div>
-      <div class="rou-rgt">
-        <h3>7,00,00,000+</h3>
-        <p>Booking</p>
-      </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-</div>
-
-   
-    
   </section>
 </div>
-
-
-
-
-
-
-  <footer id="footer" class="hoc clear" style="height: 80%;"> 
- 
+<footer id="footer" class="hoc clear bg-dark col-md-12 text-light" style="height: 80%;"> 
+ <div style="color: white;" class="col-md-12" >
     <div class="one_third first" style="float: left;">
       <h6 class="heading">TMS</h6>
       <p>About tour managemet system</p>
@@ -156,11 +128,13 @@
         <p class="nospace">Todays headline</p>
       </article>
     </div>
-
+</div>
   </footer>
 
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src=" {{ url('assets/web/assets/jquery/jquery.min.js') }}"></script>
+ <script src=" {{ url('assets/bootstrap/js/bootstrap.min.js') }}"></script>
 </body>
 </html>

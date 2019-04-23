@@ -28,7 +28,9 @@
 @csrf
 			<div class="form-group">
 				<input type="text" name="program_name" class="form-control" placeholder="Enter Program Name" />
-				<input type="text" name="detail" class="form-control" cols="30" rows="5" placeholder="Enter package detail" />
+				<br>
+				<label>Details</label>
+				<textarea type="text" name="detail" class="form-control" cols="30" rows="5" value="Enter package detail" /> </textarea>
 
 				<input type="file" name="image" class="form-control" placeholder="Enter image" />
 				<input type="text" name="price" class="form-control" placeholder="Enter price" />

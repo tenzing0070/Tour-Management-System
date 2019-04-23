@@ -17,7 +17,7 @@ class BillController extends Controller
         $id=DB::table('demos')->get()->last()->id;
          $demos = DB::table('demos')
           ->join('programs','programs.id','=','demos.PackId')
-          ->select('demos.*','programs.program_name','programs.price','programs.hotel')
+          ->select('demos.*','programs.program_name','programs.price','programs.hotel','programs.detail')
          ->where('demos.id','=',$id)
          ->get()->toArray();
       return view('tms.receipt', compact('demos')); 

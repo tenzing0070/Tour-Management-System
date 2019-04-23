@@ -64,6 +64,7 @@ class TmsController extends Controller
         return view('tms.popup.popupinfo');
      }
 
+     
 
     /**
      * Show the form for creating a new resource.
@@ -128,7 +129,7 @@ class TmsController extends Controller
         // $usr->password=$request->password;
 
         $usr->save();
-        return redirect()->to('/tms/editProfile');
+        return redirect()->to('/tms/editProfile')->with('success', 'Data Updated');
     }
 
     /**

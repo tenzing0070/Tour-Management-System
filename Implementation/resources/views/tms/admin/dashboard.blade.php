@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <!-- Site made with Mobirise Website Builder v4.9.5, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.9.5, mobirise.com">
@@ -33,8 +32,8 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="{{ url ('assets/https://mobirise.co') }}">
-                         <img src="{{ url('assets/images/logo2.png') }}" alt="Mobirise" style="height: 3.8rem;">
+                    <a href="#">
+                         <img src="{{ url('assets/images/logo2.png') }}" alt="" style="height: 3.8rem;">
                     </a>
                 </span>
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="">
@@ -43,7 +42,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="{{ url('assets/https://mobirise.co') }}">
+                    <a class="nav-link link text-white display-4" href="#">
                         <br></a>
                 </li></ul>
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-secondary display-4" href="{{ route('login')}}">Logout</a></div>

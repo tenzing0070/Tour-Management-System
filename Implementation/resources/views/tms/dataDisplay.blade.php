@@ -24,7 +24,6 @@
 					<th>Package Id</th>
 					<th>Booking Date</th>
 					<th>Package starts</th>
-					<th>Package Ends</th>
 					<th>Number of People</th>				
 				</tr>
 		@foreach($demos as $row)
@@ -35,7 +34,6 @@
 					<td>{{$row->PackId}}</td>
 					<td>{{$row->bookdate}}</td>
 					<td>{{$row->from_date}}</td>
-					<td>{{$row->to_date}}</td>
 					<td>{{$row->nop}}</td>
 				</tr>
 @endforeach	
